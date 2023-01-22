@@ -1,0 +1,82 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+        }
+    },
+    "extends": [
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "plugin:jsx-a11y/recommended",
+        "eslint:recommended",
+        "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+        "plugin:react-hooks/recommended", // uses the recommended rules for react-hooks
+        "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+        "prettier", // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+        "plugin:prettier/recommended" // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    ],
+    "plugins": ["simple-import-sort", "prettier"],
+    "rules": {
+        "eqeqeq": "error",
+        "import/named": "warn",
+        "import/namespace": "warn",
+        "import/no-named-as-default": "off",
+        "import/no-unresolved": "off",
+        "import/export": "warn",
+        "import/order": [
+            "error",
+            {
+                "groups": ["builtin", "external", "parent", "sibling", "index"],
+                "pathGroups": [
+                    {
+                        "pattern": "react",
+                        "group": "external",
+                        "position": "before"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["react"],
+                "newlines-between": "never",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ],
+        "no-console": [
+            "warn",
+            {
+                "allow": ["warn", "error"]
+            }
+        ],
+        "no-prototype-builtins": "off",
+        "no-use-before-define": "off",
+        "no-var": "error",
+        "no-undef": "warn",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "react/react-in-jsx-scope": 0,
+        "react/prop-types": 0,
+        "semi": ["error", "always"],
+        "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
+        "@typescript-eslint/explicit-module-boundary-types": ["error"],
+        "@typescript-eslint/no-empty-function": ["error"],
+        "import/no-relative-parent-imports": "warn" // You should only import sibling or child files using relative imports, otherwise use absolute imports.
+    }
+}

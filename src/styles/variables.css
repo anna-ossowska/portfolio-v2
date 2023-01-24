@@ -36,13 +36,6 @@
     --border-radius: 4px;
 
     /* Z-indexes */
-    --navbar-z-index: 1000,
-    --sidebar-z-index: 1100,
-
-    /* Media queries */
-    --phone: 600px,
-    --tab-port: 768px,
-    --tab-land: 992px,
-    --desktop: 1200px,
-    --big-desktop: 1800px,
+    --navbar-z-index: 1000;
+    --sidebar-z-index: 1100;
 }

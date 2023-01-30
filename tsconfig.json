@@ -16,7 +16,14 @@
         "noEmit": true,
         "noFallthroughCasesInSwitch": true,
         "jsx": "react-jsx",
-        "types": ["node"]
+        "types": ["node"],
+        "paths": {
+            "common/*": ["./src/common/*"],
+            "components/*": ["./src/components/*"],
+            "modules/*": ["./src/modules/*"],
+            "navigation/*": ["./src/navigation/*"],
+            "styles/*": ["./src/styles/*"]
+        }
     },
     "include": ["src"]
 }

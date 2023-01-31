@@ -7,6 +7,19 @@ const MainContainer = styled.main`
     max-width: 1600px;
     min-height: 100vh;
     padding: 200px 150px;
+    position: relative;
+
+    @media only screen and (max-width: 992px) {
+        padding: 200px 100px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 200px 80px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        padding: 200px 50px;
+    }
 `;
 
 interface LayoutProps {

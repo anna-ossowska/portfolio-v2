@@ -19,7 +19,8 @@
 
     /* Text colors*/
     --color-text-main: #8892b0;
-    --color-text-light: #ccd6f6;
+    --color-text-light-1: #a2aed1;
+    --color-text-light-2: #ccd6f6;
     --color-text-highlight: #f9f871;
 
     /* Font */
@@ -39,3 +40,10 @@
     --navbar-z-index: 1000;
     --sidebar-z-index: 1100;
 }
+
+/* Media queries 
+    --phone: 600px,
+    --tab-port: 768px,
+    --tab-land: 992px,
+    --desktop: 1200px,
+    --big-desktop: 1800px, */

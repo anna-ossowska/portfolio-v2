@@ -39,8 +39,8 @@ h5 {
 
 a {
     text-decoration: none;
-    color: var(--color-text-highlight);
-    font-size: 1.062rem;
+    color: var(--color-text-main);
+    /* font-size: 1.062rem; */
 }
 
 img {

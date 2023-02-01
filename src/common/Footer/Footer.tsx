@@ -21,6 +21,15 @@ const IconContainer = styled.div`
 
 const IconWrapper = styled.div`
     width: 20px;
+
+    & a {
+        font-family: var(--font-family-secondary);
+        transition: color 0.2s;
+
+        &:hover {
+            color: var(--color-secondary-highlight);
+        }
+    }
 `;
 
 const TextWrapper = styled.div`
@@ -46,13 +55,23 @@ const Footer = (): ReactElement => {
             <Divider />
             <IconContainer>
                 <IconWrapper>
-                    <IconGithub />
+                    <a href="https://github.com/anna-ossowska" target="_blank" rel="noopener noreferrer">
+                        <IconGithub />
+                    </a>
                 </IconWrapper>
                 <IconWrapper>
-                    <IconLinkedIn />
+                    <a
+                        href="https://www.linkedin.com/in/anna-ossowska-053485130/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <IconLinkedIn />
+                    </a>
                 </IconWrapper>
                 <IconWrapper>
-                    <IconMail />
+                    <a href="mailto:ossowska.anna1@gmail.com">
+                        <IconMail />
+                    </a>
                 </IconWrapper>
             </IconContainer>
             <TextWrapper>

@@ -12,7 +12,7 @@
     --color-primary-light: #e3f0ff;
 
     /* Secondary colors*/
-    --color-secondary-main: #f9f871;
+    --color-secondary-highlight: #f9f871;
 
     /* Divider color */
     --color-divider: #233554;
@@ -39,6 +39,9 @@
     /* Z-indexes */
     --navbar-z-index: 1000;
     --sidebar-z-index: 1100;
+
+    /* Components */
+    --navbar-height: 100px;
 }
 
 /* Media queries 

@@ -6,7 +6,7 @@ const MainContainer = styled.main`
     width: 100%;
     max-width: 1600px;
     min-height: 100vh;
-    padding: 200px 150px;
+    padding: 0 150px 200px;
     position: relative;
 
     @media only screen and (max-width: 992px) {

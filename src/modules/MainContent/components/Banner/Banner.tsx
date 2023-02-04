@@ -5,6 +5,7 @@ import BigHeading from './BigHeading';
 import Description from './Description';
 
 const Container = styled.section`
+    height: 100vh;
     padding: 100px 150px 0;
 `;
 

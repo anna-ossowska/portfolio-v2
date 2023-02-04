@@ -13,6 +13,7 @@
 
     /* Secondary colors*/
     --color-secondary-highlight: #f9f871;
+    --color-secondary-highlight-hover: rgba(249, 249, 113, 0.12);
 
     /* Divider color */
     --color-divider: #233554;

@@ -77,6 +77,6 @@
         "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
         "@typescript-eslint/explicit-module-boundary-types": ["error"],
         "@typescript-eslint/no-empty-function": ["error"],
-        "import/no-relative-parent-imports": "warn" // You should only import sibling or child files using relative imports, otherwise use absolute imports.
+        "import/no-relative-parent-imports": "off" // You should only import sibling or child files using relative imports, otherwise use absolute imports.
     }
 }

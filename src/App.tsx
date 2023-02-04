@@ -1,14 +1,13 @@
 import { ReactElement } from 'react';
-import Footer from './common/Footer/Footer';
-import { Layout, Navbar } from './common/index';
-import Main from './modules/Main/Main';
+import { Layout, Navbar, Footer } from './common/index';
+import MainContent from './modules/MainContent/MainContent';
 
 const App = (): ReactElement => {
     return (
         <div>
             <Navbar />
             <Layout>
-                <Main />
+                <MainContent />
                 <Footer />
             </Layout>
         </div>

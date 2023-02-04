@@ -19,6 +19,7 @@ body {
 h1,
 h2 {
     font-size: 4.6875rem;
+    line-height: 1.2;
 }
 
 h3 {
@@ -33,9 +34,9 @@ h5 {
     font-size: 1.562rem;
 }
 
-/* p {
+p {
     font-size: 1.062rem;
-} */
+}
 
 a {
     text-decoration: none;

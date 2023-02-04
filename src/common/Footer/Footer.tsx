@@ -1,4 +1,3 @@
-/* eslint-disable import/no-relative-parent-imports */
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import { IconGithub, IconLinkedIn, IconMail } from '../../assets/icons/index';

@@ -48,6 +48,10 @@ const Divider = styled.div`
     margin: 20px 0;
 `;
 
+const StyledParagraph = styled.p`
+    font-size: 15px;
+`;
+
 const Footer = (): ReactElement => {
     return (
         <FooterContainer>
@@ -74,7 +78,7 @@ const Footer = (): ReactElement => {
                 </IconWrapper>
             </IconContainer>
             <TextWrapper>
-                <p>© Designed and built by Anna Ossowska</p>
+                <StyledParagraph>© Designed & built by Anna Ossowska</StyledParagraph>
             </TextWrapper>
         </FooterContainer>
     );

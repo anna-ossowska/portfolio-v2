@@ -1,13 +1,13 @@
 import { ReactElement } from 'react';
 import { Layout, Navbar, Footer } from './common/index';
-import MainContent from './modules/MainContent/MainContent';
+import Main from './modules/Main/Main';
 
 const App = (): ReactElement => {
     return (
         <div>
             <Navbar />
             <Layout>
-                <MainContent />
+                <Main />
                 <Footer />
             </Layout>
         </div>

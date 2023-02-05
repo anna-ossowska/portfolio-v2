@@ -50,6 +50,10 @@ const Divider = styled.div`
 
 const StyledParagraph = styled.p`
     font-size: 15px;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 13px !important;
+    }
 `;
 
 const Footer = (): ReactElement => {

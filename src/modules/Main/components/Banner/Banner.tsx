@@ -1,12 +1,19 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import { Button, FeaturedParagraph, TextHighlight } from '../../../../common/index';
-import BigHeading from './BigHeading';
 import Description from './Description';
+import PrimaryHeading from './PrimaryHeading';
 
 const Container = styled.section`
-    height: 100vh;
-    padding: 150px 150px 0;
+    padding: 150px 150px;
+
+    @media only screen and (max-width: 992px) {
+        padding: 150px 100px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 150px 50px;
+    }
 `;
 
 const ButtonContainer = styled.div`
@@ -17,7 +24,7 @@ const Banner = (): ReactElement => {
     return (
         <Container>
             <FeaturedParagraph>My name is</FeaturedParagraph>
-            <BigHeading message="Anna Ossowska." />
+            <PrimaryHeading message="Anna Ossowska." />
             <Description>
                 I am a <TextHighlight> Front-end Developer and Graphic Designer</TextHighlight> with five years of
                 experience in the

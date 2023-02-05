@@ -17,6 +17,15 @@ const NavbarList = styled.ol`
     gap: 80px;
     color: var(--color-secondary-highlight);
     font-family: var(--font-family-secondary);
+
+    @media only screen and (max-width: 992px) {
+        gap: 60px;
+        font-size: 14px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const NavbarItem = styled.li`

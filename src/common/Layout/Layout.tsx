@@ -9,16 +9,12 @@ const MainContainer = styled.main`
     padding: 0 150px 200px;
     position: relative;
 
-    @media only screen and (max-width: 992px) {
-        padding: 200px 100px;
+    @media only screen and (max-width: 1500px) {
+        padding: 0 20px 200px;
     }
 
-    @media only screen and (max-width: 768px) {
-        padding: 200px 80px;
-    }
-
-    @media only screen and (max-width: 600px) {
-        padding: 200px 50px;
+    @media only screen and (max-width: 1200px) {
+        padding: 0 0 200px;
     }
 `;
 

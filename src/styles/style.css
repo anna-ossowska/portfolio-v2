@@ -41,7 +41,6 @@ p {
 a {
     text-decoration: none;
     color: var(--color-text-main);
-    /* font-size: 1.062rem; */
 }
 
 img {
@@ -67,5 +66,9 @@ button {
 @media only screen and (max-width: 600px) {
     html {
         font-size: 85%;
+    }
+
+    p {
+        font-size: 15px !important;
     }
 }

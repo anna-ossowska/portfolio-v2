@@ -5,7 +5,15 @@ import { Banner, NumberedHeader } from './components';
 
 const StyledSection = styled.div`
     padding: 0 150px;
-    height: 90vh;
+    margin-bottom: 150px;
+
+    @media only screen and (max-width: 992px) {
+        padding: 0 100px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 0 50px;
+    }
 `;
 
 const StyledParagraph = styled.p`
@@ -13,15 +21,28 @@ const StyledParagraph = styled.p`
     margin: 0 0 15px;
     width: 90%;
     font-size: 18px;
+
+    @media only screen and (max-width: 992px) {
+        width: 100%;
+    }
 `;
 
 const AboutSectionContainer = styled.div`
     display: flex;
+
+    @media only screen and (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const PictureContainer = styled.div`
     margin-top: 8px;
     position: relative;
+
+    @media only screen and (max-width: 992px) {
+        margin-top: 30px;
+    }
 
     &::after {
         content: '';
@@ -46,6 +67,10 @@ const SkillsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 20px;
+
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
 `;
 
 const SkillsWrapper = styled.div`
@@ -53,6 +78,10 @@ const SkillsWrapper = styled.div`
     min-height: 300px;
     padding: 20px;
     border-radius: var(--border-radius);
+
+    @media only screen and (max-width: 600px) {
+        min-height: 200px;
+    }
 `;
 
 interface StyledListProps {
@@ -68,6 +97,10 @@ const StyledList = styled.ul`
     margin: 20px 0 0 0;
     overflow: hidden;
     list-style: none;
+
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 const ListHeader = styled.h4`
@@ -75,6 +108,10 @@ const ListHeader = styled.h4`
     font-weight: var(--font-weight-regular);
     font-size: 18px;
     letter-spacing: 0.02rem;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 16px;
+    }
 `;
 
 const ListElement = styled.li`
@@ -85,12 +122,21 @@ const ListElement = styled.li`
     font-family: var(--font-family-secondary);
     color: var(--color-text-light-2);
 
+    @media only screen and (max-width: 600px) {
+        font-size: 13px;
+    }
+
     &:before {
         content: '▹';
         position: absolute;
         left: 0;
+        top: -2px;
         color: var(--color-text-highlight);
         font-size: 18px;
+
+        @media only screen and (max-width: 600px) {
+            top: -4px;
+        }
     }
 `;
 
@@ -140,7 +186,6 @@ const Main = (): ReactElement => {
                             <ListElement>CSS</ListElement>
                             <ListElement>Redux & Redux Toolkit</ListElement>
                             <ListElement>HTML5</ListElement>
-
                             <ListElement>Material UI</ListElement>
                             <ListElement>Responsive Web Design</ListElement>
                             <ListElement>Sass</ListElement>

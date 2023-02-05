@@ -14,6 +14,10 @@ const StyledHeader = styled.h3`
     margin: 10px 0 30px;
     font-size: 30px;
 
+    @media only screen and (max-width: 600px) {
+        font-size: 25px;
+    }
+
     &::after {
         content: '';
         display: block;

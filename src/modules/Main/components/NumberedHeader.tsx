@@ -7,26 +7,31 @@ interface NumberedHeaderProps {
 }
 
 const StyledHeader = styled.h3`
+    background-color: var(--color-background-default);
     color: var(--color-text-light-2);
+    font-size: 30px;
     letter-spacing: 0.06rem;
     text-transform: capitalize;
-    position: relative;
     margin: 10px 0 30px;
-    font-size: 30px;
 
     @media only screen and (max-width: 600px) {
         font-size: 25px;
     }
+`;
 
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 215px;
-        width: 300px;
-        height: 0.5px;
-        background-color: var(--color-divider);
+const Divider = styled.div`
+    height: 0.5px;
+    background-color: var(--color-divider);
+    width: 350px;
+    margin-top: -15px;
+    margin-left: 15px;
+
+    @media only screen and (max-width: 768px) {
+        width: 200px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 100px;
     }
 `;
 
@@ -39,9 +44,12 @@ const HighlightedNumber = styled.span`
 
 const NumberedHeader = ({ headerNumber, title }: NumberedHeaderProps): ReactElement => {
     return (
-        <StyledHeader>
-            <HighlightedNumber>{headerNumber}.</HighlightedNumber> {title}
-        </StyledHeader>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+            <StyledHeader>
+                <HighlightedNumber>{headerNumber}.</HighlightedNumber> {title}
+            </StyledHeader>
+            <Divider />
+        </div>
     );
 };
 

@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+import { IconGithub, IconExternalLink } from '../../assets/icons/index';
 import Profile from '../../assets/images/profile.png';
 import { Banner, NumberedHeader } from './components';
 
@@ -36,7 +37,7 @@ const AboutSectionContainer = styled.div`
     }
 `;
 
-const PictureContainer = styled.div`
+const ImageContainer = styled.div`
     margin-top: 8px;
     position: relative;
 
@@ -60,6 +61,8 @@ const PictureContainer = styled.div`
 
 const StyledImage = styled.img`
     width: 300px;
+    height: 300px;
+    object-fit: cover;
     border-radius: var(--border-radius);
 `;
 
@@ -120,7 +123,7 @@ const ListElement = styled.li`
     padding-left: 25px;
     font-size: 15px;
     font-family: var(--font-family-secondary);
-    color: var(--color-text-light-2);
+    color: var(--color-text-light-1);
 
     @media only screen and (max-width: 600px) {
         font-size: 13px;
@@ -136,6 +139,90 @@ const ListElement = styled.li`
 
         @media only screen and (max-width: 600px) {
             top: -4px;
+        }
+    }
+`;
+
+const ProjectContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    min-height: 300px;
+`;
+
+const ProjectImageWrapper = styled.div`
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    grid-area: 1 / 1 / 1 / 7;
+
+    & img {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        cursor: pointer;
+        transition: var(--custom-transition);
+
+        &:hover {
+            filter: none;
+        }
+    }
+`;
+
+const ProjectContentWrapper = styled.div`
+    grid-area: 1 / 7 / 1 / 13;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+`;
+
+const ProjectTitle = styled.h4`
+    color: var(--color-text-light-2);
+    margin-bottom: 20px;
+`;
+
+const ProjectDescription = styled.p`
+    color: var(--color-text-light-1);
+    background: var(--color-primary-dark);
+    padding: 20px;
+    font-size: 16px;
+    text-align: right;
+    margin-bottom: 20px;
+    width: 550px;
+    z-index: 2;
+`;
+
+const ProjectTechnologyList = styled.ul`
+    display: flex;
+    gap: 18px;
+    list-style-type: none;
+    font-family: var(--font-family-secondary);
+    color: var(--color-text-light-1);
+    margin-bottom: 20px;
+
+    & li {
+        font-size: 13px;
+    }
+`;
+
+const ProjectLinkList = styled.div`
+    display: flex;
+    gap: 20px;
+
+    & svg {
+        height: 23px;
+        color: var(--color-text-light-2);
+        transition: color 0.2s;
+    }
+
+    & a:hover {
+        & svg {
+            color: var(--color-secondary-highlight);
         }
     }
 `;
@@ -165,12 +252,11 @@ const Main = (): ReactElement => {
                             perspiciatis ratione.
                         </StyledParagraph>
                     </div>
-                    <PictureContainer>
+                    <ImageContainer>
                         <StyledImage src={Profile} alt="profile" />
-                    </PictureContainer>
+                    </ImageContainer>
                 </AboutSectionContainer>
             </StyledSection>
-
             <StyledSection>
                 <NumberedHeader headerNumber="02" title="Skills" />
 
@@ -237,6 +323,44 @@ const Main = (): ReactElement => {
                     <ListElement>React Table</ListElement>
                     <ListElement>React Draggable</ListElement>
                 </StyledList> */}
+            </StyledSection>
+
+            <StyledSection>
+                <NumberedHeader headerNumber="03" title="Commercial products" />
+                <ProjectContainer>
+                    <ProjectContentWrapper>
+                        <ProjectTitle>Solintegra Partner Portal</ProjectTitle>
+                        <ProjectDescription>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum
+                            quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis
+                            natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit.
+                        </ProjectDescription>
+                        <ProjectTechnologyList>
+                            <li>React</li>
+                            <li>AWS Aplify</li>
+                            <li>TypeScript</li>
+                            <li>Material UI</li>
+                            <li>Redux Toolkit</li>
+                        </ProjectTechnologyList>
+                        <ProjectLinkList>
+                            <a href="https://github.com/anna-ossowska" target="_blank" rel="noopener noreferrer">
+                                <IconGithub />
+                            </a>
+                            <a href="https://github.com/anna-ossowska" target="_blank" rel="noopener noreferrer">
+                                <IconExternalLink />
+                            </a>
+                        </ProjectLinkList>
+                    </ProjectContentWrapper>
+                    <ProjectImageWrapper>
+                        <img
+                            src={
+                                'https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80'
+                            }
+                            alt="profile"
+                        />
+                    </ProjectImageWrapper>
+                </ProjectContainer>
             </StyledSection>
         </div>
     );

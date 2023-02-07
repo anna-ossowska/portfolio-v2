@@ -1,18 +1,18 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 
-interface NumberedHeaderProps {
-    headerNumber: string;
-    title: string;
-}
+const Container = styled.div`
+    display: flex;
+    align-items: center;
+`;
 
-const StyledHeader = styled.h3`
+const Header = styled.h3`
     background-color: var(--color-background-default);
     color: var(--color-text-light-2);
     font-size: 30px;
     letter-spacing: 0.06rem;
     text-transform: capitalize;
-    margin: 10px 0 30px;
+    margin: 10px 0 35px;
 
     @media only screen and (max-width: 600px) {
         font-size: 25px;
@@ -23,7 +23,7 @@ const Divider = styled.div`
     height: 0.5px;
     background-color: var(--color-divider);
     width: 350px;
-    margin-top: -15px;
+    margin-top: -20px;
     margin-left: 15px;
 
     @media only screen and (max-width: 768px) {
@@ -42,14 +42,19 @@ const HighlightedNumber = styled.span`
     font-size: 0.8em;
 `;
 
+interface NumberedHeaderProps {
+    headerNumber: string;
+    title: string;
+}
+
 const NumberedHeader = ({ headerNumber, title }: NumberedHeaderProps): ReactElement => {
     return (
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-            <StyledHeader>
+        <Container>
+            <Header>
                 <HighlightedNumber>{headerNumber}.</HighlightedNumber> {title}
-            </StyledHeader>
+            </Header>
             <Divider />
-        </div>
+        </Container>
     );
 };
 

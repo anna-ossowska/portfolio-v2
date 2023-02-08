@@ -45,6 +45,10 @@
     /* Components */
     --navbar-height: 100px;
 
+    /* Shadow */
+    --box-shadow: 0 20px 30px -15px;
+    --color-shadow: rgba(2, 12, 27, 0.7);
+
     /* Transitions */
     --custom-transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }

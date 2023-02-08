@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 
-interface ButtonProps {
-    message: string;
+interface StyledButtonProps {
+    large: boolean;
 }
 
 const StyledButton = styled.button`
@@ -10,7 +10,7 @@ const StyledButton = styled.button`
     color: var(--color-text-highlight);
     border: 1px solid var(--color-text-highlight);
     border-radius: var(--border-radius);
-    padding: 1.1rem 1.75rem;
+    padding: ${({ large }: StyledButtonProps) => (large ? '1.1rem 1.75rem' : '0.75rem 1rem')};
     font-size: 14px;
     font-family: var(--font-family-secondary);
     text-decoration: none;
@@ -22,8 +22,13 @@ const StyledButton = styled.button`
     }
 `;
 
-const Button = ({ message }: ButtonProps): ReactElement => {
-    return <StyledButton>{message}</StyledButton>;
+interface ButtonProps {
+    message: string;
+    large: boolean;
+}
+
+const Button = ({ message, large }: ButtonProps): ReactElement => {
+    return <StyledButton large={large}>{message}</StyledButton>;
 };
 
 export default Button;

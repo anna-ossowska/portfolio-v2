@@ -32,7 +32,7 @@ const Banner = (): ReactElement => {
                 creating scalable products with great user experiences.
             </Description>
             <ButtonContainer>
-                <Button message="Check out my projects" />
+                <Button message="Check out my projects" large={true} />
             </ButtonContainer>
         </Container>
     );

@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import styled from 'styled-components';
 import { IconGithub, IconExternalLink } from '../../assets/icons/index';
 import Profile from '../../assets/images/profile.png';
+import { Button } from '../../common';
 import { Banner, NumberedHeader } from './components';
 
 const StyledSection = styled.div`
@@ -147,13 +148,18 @@ const ProjectContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     min-height: 300px;
+    margin-bottom: 100px;
 `;
+
+interface ProjectImageWrapperProps {
+    contentLeft: boolean;
+}
 
 const ProjectImageWrapper = styled.div`
     width: 100%;
     z-index: 1;
     position: relative;
-    grid-area: 1 / 1 / 1 / 7;
+    grid-area: ${({ contentLeft }: ProjectImageWrapperProps) => (contentLeft ? '1 / 7 / 1 / 13' : '1 / 1 / 1 / 7')};
 
     & img {
         position: absolute;
@@ -172,13 +178,19 @@ const ProjectImageWrapper = styled.div`
     }
 `;
 
+interface ProjectContentWrapperProps {
+    contentLeft: boolean;
+}
+
 const ProjectContentWrapper = styled.div`
-    grid-area: 1 / 7 / 1 / 13;
+    grid-area: ${({ contentLeft }: ProjectContentWrapperProps) => (contentLeft ? '1 / 1 / 1 / 7' : '1 / 7 / 1 / 13')};
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: ${({ contentLeft }: ProjectContentWrapperProps) => (contentLeft ? 'flex-start' : 'flex-end')};
     padding: 20px;
+    padding: ${({ contentLeft }: ProjectContentWrapperProps) =>
+        contentLeft ? '20px 20px 20px 0' : '20px 0 20px 20px'};
 `;
 
 const ProjectTitle = styled.h4`
@@ -186,15 +198,24 @@ const ProjectTitle = styled.h4`
     margin-bottom: 20px;
 `;
 
+interface ProjectDescriptionProps {
+    contentLeft: boolean;
+}
+
 const ProjectDescription = styled.p`
     color: var(--color-text-light-1);
     background: var(--color-primary-dark);
     padding: 20px;
     font-size: 16px;
-    text-align: right;
+    text-align: ${({ contentLeft }: ProjectDescriptionProps) => (contentLeft ? 'left' : 'right')};
     margin-bottom: 20px;
     width: 550px;
     z-index: 2;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+        box-shadow: var(--box-shadow) var(--color-shadow);
+    }
 `;
 
 const ProjectTechnologyList = styled.ul`
@@ -225,6 +246,10 @@ const ProjectLinkList = styled.div`
             color: var(--color-secondary-highlight);
         }
     }
+`;
+
+const ButtonContainer = styled.div`
+    margin-top: 16px;
 `;
 
 const Main = (): ReactElement => {
@@ -327,10 +352,11 @@ const Main = (): ReactElement => {
 
             <StyledSection>
                 <NumberedHeader headerNumber="03" title="Commercial products" />
+
                 <ProjectContainer>
-                    <ProjectContentWrapper>
+                    <ProjectContentWrapper contentLeft={false}>
                         <ProjectTitle>Solintegra Partner Portal</ProjectTitle>
-                        <ProjectDescription>
+                        <ProjectDescription contentLeft={false}>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum
                             quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis
                             natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur
@@ -338,8 +364,8 @@ const Main = (): ReactElement => {
                         </ProjectDescription>
                         <ProjectTechnologyList>
                             <li>React</li>
-                            <li>AWS Aplify</li>
                             <li>TypeScript</li>
+                            <li>AWS Aplify</li>
                             <li>Material UI</li>
                             <li>Redux Toolkit</li>
                         </ProjectTechnologyList>
@@ -351,8 +377,87 @@ const Main = (): ReactElement => {
                                 <IconExternalLink />
                             </a>
                         </ProjectLinkList>
+                        <ButtonContainer>
+                            <Button message="Learn More" large={false} />
+                        </ButtonContainer>
                     </ProjectContentWrapper>
-                    <ProjectImageWrapper>
+                    <ProjectImageWrapper contentLeft={false}>
+                        <img
+                            src={
+                                'https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80'
+                            }
+                            alt="profile"
+                        />
+                    </ProjectImageWrapper>
+                </ProjectContainer>
+
+                <ProjectContainer>
+                    <ProjectContentWrapper contentLeft>
+                        <ProjectTitle>Life@Work</ProjectTitle>
+                        <ProjectDescription contentLeft>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum
+                            quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis
+                            natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit.
+                        </ProjectDescription>
+                        <ProjectTechnologyList>
+                            <li>React</li>
+                            <li>TypeScript</li>
+                            <li>React Query</li>
+                            <li>Styled Components</li>
+                            <li>C#</li>
+                        </ProjectTechnologyList>
+                        <ProjectLinkList>
+                            <a href="https://github.com/anna-ossowska" target="_blank" rel="noopener noreferrer">
+                                <IconGithub />
+                            </a>
+                            <a href="https://github.com/anna-ossowska" target="_blank" rel="noopener noreferrer">
+                                <IconExternalLink />
+                            </a>
+                        </ProjectLinkList>
+                        <ButtonContainer>
+                            <Button message="Learn More" large={false} />
+                        </ButtonContainer>
+                    </ProjectContentWrapper>
+                    <ProjectImageWrapper contentLeft>
+                        <img
+                            src={
+                                'https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80'
+                            }
+                            alt="profile"
+                        />
+                    </ProjectImageWrapper>
+                </ProjectContainer>
+
+                <ProjectContainer>
+                    <ProjectContentWrapper contentLeft={false}>
+                        <ProjectTitle>Mitt Fatland</ProjectTitle>
+                        <ProjectDescription contentLeft={false}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum
+                            quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis
+                            natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit.
+                        </ProjectDescription>
+                        <ProjectTechnologyList>
+                            <li>React</li>
+                            <li>JavaScript</li>
+                            <li>Styled Components</li>
+                            <li>Bootstrap</li>
+                            <li>C#</li>
+                        </ProjectTechnologyList>
+                        <ProjectLinkList>
+                            <a href="https://github.com/anna-ossowska" target="_blank" rel="noopener noreferrer">
+                                <IconGithub />
+                            </a>
+                            <a href="https://github.com/anna-ossowska" target="_blank" rel="noopener noreferrer">
+                                <IconExternalLink />
+                            </a>
+                        </ProjectLinkList>
+                        <ButtonContainer>
+                            <Button message="Learn More" large={false} />
+                        </ButtonContainer>
+                    </ProjectContentWrapper>
+                    <ProjectImageWrapper contentLeft={false}>
                         <img
                             src={
                                 'https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80'

@@ -11,6 +11,7 @@
     --color-primary-main: #112240;
     --color-primary-dark: #112240;
     --color-primary-light: #e3f0ff;
+    --color-primary-main-opaque: rgba(17, 34, 64, 0.918);
 
     /* Secondary colors*/
     --color-secondary-highlight: #f9f871;

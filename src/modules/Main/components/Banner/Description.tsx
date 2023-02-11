@@ -7,7 +7,7 @@ interface DescriptionProps {
 
 const Container = styled.div`
     max-width: 540px;
-    text-align: justify;
+    /* text-align: justify; */
 `;
 
 const Paragraph = styled.p`

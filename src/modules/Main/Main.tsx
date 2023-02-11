@@ -19,7 +19,7 @@ const StyledSection = styled.div`
 `;
 
 const StyledParagraph = styled.p`
-    text-align: justify;
+    /* text-align: justify; */
     margin: 0 0 15px;
     width: 90%;
     font-size: 18px;
@@ -149,6 +149,21 @@ const ProjectContainer = styled.div`
     grid-template-columns: repeat(12, 1fr);
     min-height: 300px;
     margin-bottom: 100px;
+
+    @media only screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        /* makevartiable opaque */
+        background: var(--color-primary-main-opaque);
+        position: relative;
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: var(--box-shadow) var(--color-shadow);
+            cursor: pointer;
+        }
+    }
 `;
 
 interface ProjectImageWrapperProps {
@@ -176,6 +191,22 @@ const ProjectImageWrapper = styled.div`
             filter: none;
         }
     }
+
+    @media only screen and (max-width: 992px) {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -2;
+
+        & img {
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+    }
 `;
 
 interface ProjectContentWrapperProps {
@@ -191,11 +222,21 @@ const ProjectContentWrapper = styled.div`
     padding: 20px;
     padding: ${({ contentLeft }: ProjectContentWrapperProps) =>
         contentLeft ? '20px 20px 20px 0' : '20px 0 20px 20px'};
+
+    @media only screen and (max-width: 992px) {
+        align-items: flex-start;
+        padding: 20px;
+    }
 `;
 
 const ProjectTitle = styled.h4`
     color: var(--color-text-light-2);
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
 `;
 
 interface ProjectDescriptionProps {
@@ -216,6 +257,21 @@ const ProjectDescription = styled.p`
     &:hover {
         box-shadow: var(--box-shadow) var(--color-shadow);
     }
+
+    @media only screen and (max-width: 992px) {
+        width: 100%;
+        padding: 15px 0 10px;
+        text-align: left;
+        background: transparent;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        margin-bottom: 10px;
+    }
 `;
 
 const ProjectTechnologyList = styled.ul`
@@ -228,6 +284,14 @@ const ProjectTechnologyList = styled.ul`
 
     & li {
         font-size: 13px;
+    }
+
+    @media only screen and (max-width: 992px) {
+        flex-wrap: wrap;
+
+        & li {
+            margin-bottom: -12px;
+        }
     }
 `;
 
@@ -245,6 +309,10 @@ const ProjectLinkList = styled.div`
         & svg {
             color: var(--color-secondary-highlight);
         }
+    }
+
+    @media only screen and (max-width: 992px) {
+        margin-top: 10px;
     }
 `;
 
@@ -293,7 +361,7 @@ const Main = (): ReactElement => {
                             <ListElement>Styled Components</ListElement>
                             <ListElement>TypeScript</ListElement>
                             <ListElement>Bootstrap</ListElement>
-                            <ListElement>Java Script (ES6)</ListElement>
+                            <ListElement>JavaScript (ES6)</ListElement>
                             <ListElement>CSS</ListElement>
                             <ListElement>Redux & Redux Toolkit</ListElement>
                             <ListElement>HTML5</ListElement>

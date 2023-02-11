@@ -15,7 +15,7 @@ const Header = styled.h3`
     margin: 10px 0 35px;
 
     @media only screen and (max-width: 600px) {
-        font-size: 25px;
+        font-size: 22px;
     }
 `;
 

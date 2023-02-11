@@ -20,6 +20,10 @@ const StyledButton = styled.button`
     &:hover {
         background: var(--color-secondary-highlight-hover);
     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 13px;
+    }
 `;
 
 interface ButtonProps {

@@ -2,17 +2,7 @@ import { ReactElement } from 'react';
 import styled from 'styled-components';
 import Profile from '../../../../assets/images/profile.png';
 import { NumberedHeader, StyledSection } from '../../components/index';
-
-const StyledParagraph = styled.p`
-    /* text-align: justify; */
-    margin: 0 0 15px;
-    width: 90%;
-    font-size: 18px;
-
-    @media only screen and (max-width: 992px) {
-        width: 100%;
-    }
-`;
+import { StyledParagraph } from './components/index';
 
 const AboutSectionContainer = styled.div`
     display: flex;

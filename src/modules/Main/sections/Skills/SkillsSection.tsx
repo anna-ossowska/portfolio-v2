@@ -1,6 +1,8 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+import { frontEndSkills, graphicDesignSkills, otherSkills, projectManagmentSkills } from '../../../../config/data';
 import { NumberedHeader, StyledSection } from '../../components/index';
+import { StyledList } from './components/index';
 
 const SkillsContainer = styled.div`
     display: grid;
@@ -23,25 +25,6 @@ const SkillsWrapper = styled.div`
     }
 `;
 
-interface StyledListProps {
-    isTwoColumnLayout: boolean;
-}
-
-const StyledList = styled.ul`
-    display: grid;
-    grid-template-columns: ${({ isTwoColumnLayout }: StyledListProps) =>
-        isTwoColumnLayout ? `repeat(2, minmax(140px, 250px))` : `1fr`};
-    grid-gap: 0 10px;
-    padding: 0;
-    margin: 20px 0 0 0;
-    overflow: hidden;
-    list-style: none;
-
-    @media only screen and (max-width: 600px) {
-        grid-template-columns: 1fr;
-    }
-`;
-
 const ListHeader = styled.h4`
     color: var(--color-text-highlight);
     font-weight: var(--font-weight-regular);
@@ -53,32 +36,6 @@ const ListHeader = styled.h4`
     }
 `;
 
-const ListElement = styled.li`
-    position: relative;
-    margin-bottom: 10px;
-    padding-left: 25px;
-    font-size: 15px;
-    font-family: var(--font-family-secondary);
-    color: var(--color-text-light-1);
-
-    @media only screen and (max-width: 600px) {
-        font-size: 13px;
-    }
-
-    &:before {
-        content: '▹';
-        position: absolute;
-        left: 0;
-        top: -2px;
-        color: var(--color-text-highlight);
-        font-size: 18px;
-
-        @media only screen and (max-width: 600px) {
-            top: -4px;
-        }
-    }
-`;
-
 const SkillsSection = (): ReactElement => {
     return (
         <StyledSection>
@@ -87,66 +44,21 @@ const SkillsSection = (): ReactElement => {
             <SkillsContainer>
                 <SkillsWrapper>
                     <ListHeader>Front-end Development:</ListHeader>
-                    <StyledList isTwoColumnLayout={true}>
-                        <ListElement>React</ListElement>
-                        <ListElement>Styled Components</ListElement>
-                        <ListElement>TypeScript</ListElement>
-                        <ListElement>Bootstrap</ListElement>
-                        <ListElement>JavaScript (ES6)</ListElement>
-                        <ListElement>CSS</ListElement>
-                        <ListElement>Redux & Redux Toolkit</ListElement>
-                        <ListElement>HTML5</ListElement>
-                        <ListElement>Material UI</ListElement>
-                        <ListElement>Responsive Web Design</ListElement>
-                        <ListElement>Sass</ListElement>
-                        <ListElement>Web Accessibility</ListElement>
-                    </StyledList>
+                    <StyledList isTwoColumnLayout={true} skills={frontEndSkills} />
                 </SkillsWrapper>
-
                 <SkillsWrapper>
                     <ListHeader>Other Development Tools:</ListHeader>
-                    <StyledList isTwoColumnLayout={false}>
-                        <ListElement>AWS Amplify</ListElement>
-                        <ListElement>Git</ListElement>
-                        <ListElement>C#</ListElement>
-                        <ListElement>Big 0</ListElement>
-                    </StyledList>
+                    <StyledList isTwoColumnLayout={false} skills={otherSkills} />
                 </SkillsWrapper>
-
                 <SkillsWrapper>
                     <ListHeader>Project Management:</ListHeader>
-                    <StyledList isTwoColumnLayout={false}>
-                        <ListElement>SCRUM</ListElement>
-                        <ListElement>DevOps</ListElement>
-                        <ListElement>GitHub</ListElement>
-                        <ListElement>Monday</ListElement>
-                        <ListElement>Confluence</ListElement>
-                    </StyledList>
+                    <StyledList isTwoColumnLayout={false} skills={projectManagmentSkills} />
                 </SkillsWrapper>
-
                 <SkillsWrapper>
                     <ListHeader>Graphic & Web Design:</ListHeader>
-                    <StyledList isTwoColumnLayout={false}>
-                        <ListElement>Figma</ListElement>
-                        <ListElement>UI & UX</ListElement>
-                        <ListElement>Data Visualization</ListElement>
-                        <ListElement>Presentation Design</ListElement>
-                        <ListElement>Adobe Creative Cloud</ListElement>
-                        <ListElement>Tableau</ListElement>
-                    </StyledList>
+                    <StyledList isTwoColumnLayout={false} skills={graphicDesignSkills} />
                 </SkillsWrapper>
             </SkillsContainer>
-
-            {/* <ListHeader>Popular libraries:</ListHeader>
-                <StyledList>
-                    <ListElement>React Hook Form</ListElement>
-                    <ListElement>Yup</ListElement>
-                    <ListElement>Axios</ListElement>
-                    <ListElement>React Query</ListElement>
-                    <ListElement>React Router</ListElement>
-                    <ListElement>React Table</ListElement>
-                    <ListElement>React Draggable</ListElement>
-                </StyledList> */}
         </StyledSection>
     );
 };

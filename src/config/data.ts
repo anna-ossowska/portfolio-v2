@@ -35,3 +35,11 @@ export const libraries = [
     'React Table',
     'React Draggable',
 ];
+
+export const solintegraTechList = ['React', 'TypeScript', 'AWS Aplify', 'Material UI', 'Redux Toolkit'];
+
+export const lifeAtWorkTechList = ['React', 'TypeScript', 'React Query', 'Styled Components', 'C#'];
+
+export const fatlandTechList = ['React', 'JavaScript', 'Styled Components', 'Bootstrap', 'C#'];
+
+export const udemyCourseTechList = ['PowerPoint', 'VBA', 'XML', 'Camtasia'];

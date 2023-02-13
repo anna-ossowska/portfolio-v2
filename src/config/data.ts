@@ -43,3 +43,15 @@ export const lifeAtWorkTechList = ['React', 'TypeScript', 'React Query', 'Styled
 export const fatlandTechList = ['React', 'JavaScript', 'Styled Components', 'Bootstrap', 'C#'];
 
 export const udemyCourseTechList = ['PowerPoint', 'VBA', 'XML', 'Camtasia'];
+
+export const foodlyTechList = ['React', 'Redux', 'Toolkit', 'Firebase'];
+
+export const scentShopTechList = ['C#', 'ASP.NET', 'Entity Framework'];
+
+export const outdoorTechList = ['JavaScript', 'LeafletJS', 'Sass'];
+
+export const restCountriesTechList = ['React', 'JavaScript'];
+
+export const advisionTechList = ['JavaScript', 'Sass', 'BEM', 'LightboxJS'];
+
+export const buddyLinguaTechList = ['Ruby on Rails', 'Bootstrap', 'Heroku'];

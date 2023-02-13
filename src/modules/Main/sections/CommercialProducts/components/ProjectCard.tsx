@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import styled from 'styled-components';
 import { IconExternalLink, IconGithub } from '../../../../../assets/icons/index';
 import { Button } from '../../../../../common/index';
-import TechnologyList from './TechnologyList';
+import { TechnologyList } from './index';
 
 const ProjectContainer = styled.div`
     display: grid;

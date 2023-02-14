@@ -1,6 +1,12 @@
 import { ReactElement } from 'react';
 import { Banner } from './components';
-import { AboutSection, SkillsSection, CommercialProductsSection, CodingProjectsSection } from './sections/index';
+import {
+    AboutSection,
+    SkillsSection,
+    CommercialProductsSection,
+    CodingProjectsSection,
+    ContactSection,
+} from './sections/index';
 
 const Main = (): ReactElement => {
     return (
@@ -10,6 +16,7 @@ const Main = (): ReactElement => {
             <SkillsSection />
             <CommercialProductsSection />
             <CodingProjectsSection />
+            <ContactSection />
         </div>
     );
 };

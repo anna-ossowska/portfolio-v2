@@ -1,16 +1,22 @@
 import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
 
-interface TextHighlightProps {
-    children: ReactNode;
+interface HighlightProps {
+    isNeutralColor: boolean;
 }
 
 const Highlight = styled.span`
-    color: var(--color-text-highlight);
+    color: ${({ isNeutralColor }: HighlightProps) =>
+        isNeutralColor ? 'var(--color-text-light-2)' : 'var(--color-text-highlight)'};
 `;
 
-const TextHighlight = ({ children }: TextHighlightProps): ReactElement => {
-    return <Highlight>{children}</Highlight>;
+interface TextHighlightProps {
+    children: ReactNode;
+    isNeutralColor?: boolean;
+}
+
+const TextHighlight = ({ children, isNeutralColor = false }: TextHighlightProps): ReactElement => {
+    return <Highlight isNeutralColor={isNeutralColor}>{children}</Highlight>;
 };
 
 export default TextHighlight;

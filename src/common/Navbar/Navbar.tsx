@@ -14,16 +14,12 @@ const NavbarList = styled.ol`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-size: 16px;
     gap: 80px;
     color: var(--color-secondary-highlight);
     font-family: var(--font-family-secondary);
 
     @media only screen and (max-width: 992px) {
-        gap: 60px;
-        font-size: 14px;
-    }
-
-    @media only screen and (max-width: 768px) {
         display: none;
     }
 `;
@@ -56,6 +52,9 @@ const Navbar = (): ReactElement => {
                 </NavbarItem>
                 <NavbarItem>
                     <a href="/#coding-projects">Coding projects</a>
+                </NavbarItem>
+                <NavbarItem>
+                    <a href="/#contact">Contact</a>
                 </NavbarItem>
             </NavbarList>
         </NavbarContainer>

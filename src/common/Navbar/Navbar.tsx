@@ -1,12 +1,19 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+import Sidebar from '../Sidebar/Sidebar';
 
 const NavbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: var(--navbar-height);
+    background: rgba(10, 25, 47, 0.95);
     padding: 0 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
 `;
 
 const NavbarList = styled.ol`
@@ -16,7 +23,7 @@ const NavbarList = styled.ol`
     align-items: center;
     font-size: 16px;
     gap: 80px;
-    color: var(--color-secondary-highlight);
+    color: var(--color-text-highlight);
     font-family: var(--font-family-secondary);
 
     @media only screen and (max-width: 992px) {
@@ -40,23 +47,26 @@ const Navbar = (): ReactElement => {
     return (
         <NavbarContainer>
             <div>logo</div>
-            <NavbarList>
-                <NavbarItem>
-                    <a href="/#about">About</a>
-                </NavbarItem>
-                <NavbarItem>
-                    <a href="/#skills">Skills</a>
-                </NavbarItem>
-                <NavbarItem>
-                    <a href="/#commercial-products">Commercial products</a>
-                </NavbarItem>
-                <NavbarItem>
-                    <a href="/#coding-projects">Coding projects</a>
-                </NavbarItem>
-                <NavbarItem>
-                    <a href="/#contact">Contact</a>
-                </NavbarItem>
-            </NavbarList>
+            <div>
+                <NavbarList>
+                    <NavbarItem>
+                        <a href="/#about">About</a>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <a href="/#skills">Skills</a>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <a href="/#commercial-products">Commercial products</a>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <a href="/#coding-projects">Coding projects</a>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <a href="/#contact">Contact</a>
+                    </NavbarItem>
+                </NavbarList>
+                <Sidebar />
+            </div>
         </NavbarContainer>
     );
 };

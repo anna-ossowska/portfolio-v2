@@ -40,7 +40,7 @@ const CommercialProductsSection = (): ReactElement => {
 
             <ProjectCard
                 projectTitle="Udemy Course"
-                projectDescription="I contributed to the global learning community by designing and publishing an online course on the Udemy platform about creating PowerPoint presentations and data visualizations."
+                projectDescription="I contributed to the global learning community by designing and publishing an online course on the Udemy platform about creating PowerPoint presentations and data visualizations. The course has been purchased by more than 600 students so far."
                 contentLeft={true}
                 techList={udemyCourseTechList}
                 externalLink="https://www.udemy.com/course/use-powerpoint-like-a-professional-designer/"

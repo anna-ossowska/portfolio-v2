@@ -27,6 +27,10 @@ const Wrapper = styled.div`
 const StyledParagraph = styled.p`
     text-align: center;
     width: 500px;
+
+    @media only screen and (max-width: 600px) {
+        width: 340px;
+    }
 `;
 
 const Contact = (): ReactElement => {
@@ -37,11 +41,9 @@ const Contact = (): ReactElement => {
                 <FeaturedParagraph>05. Contact</FeaturedParagraph>
                 <StyledHeader>Get In Touch</StyledHeader>
                 <StyledParagraph>
-                    My inbox is always open. Whether you have a question
-                    <br />
-                    or just would like to say hello, please feel free to contact me <br /> at{' '}
-                    <TextHighlight isNeutralColor={true}>ossowska.anna1@gmail.com</TextHighlight> or via my{' '}
-                    <TextHighlight isNeutralColor={true}>LinkedIn</TextHighlight> profile.
+                    My inbox is always open. Whether you have a question or just would like to say hello, please feel
+                    free to contact me at <TextHighlight isNeutralColor={true}>ossowska.anna1@gmail.com</TextHighlight>{' '}
+                    or via my <TextHighlight isNeutralColor={true}>LinkedIn</TextHighlight> profile.
                 </StyledParagraph>
             </Wrapper>
         </StyledSection>

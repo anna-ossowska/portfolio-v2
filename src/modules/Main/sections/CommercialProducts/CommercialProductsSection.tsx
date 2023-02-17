@@ -1,13 +1,13 @@
 import { ReactElement } from 'react';
+import { NumberedHeader } from '../../../../common/index';
 import { fatlandTechList, lifeAtWorkTechList, solintegraTechList, udemyCourseTechList } from '../../../../config/data';
-import { NumberedHeader, StyledSection } from '../../components/index';
+import { StyledSection } from '../../components/index';
 import { ProjectCard } from './components/index';
 
 const CommercialProductsSection = (): ReactElement => {
     return (
         <StyledSection>
             <NumberedHeader headerNumber="03" title="Commercial products" />
-
             <ProjectCard
                 projectTitle="Solintegra Partner Portal"
                 projectDescription="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur adipisicing elit."

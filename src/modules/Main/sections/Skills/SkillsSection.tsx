@@ -1,7 +1,8 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+import { NumberedHeader } from '../../../../common/index';
 import { frontEndSkills, graphicDesignSkills, otherSkills, projectManagmentSkills } from '../../../../config/data';
-import { NumberedHeader, StyledSection } from '../../components/index';
+import { StyledSection } from '../../components/index';
 import { StyledList } from './components/index';
 
 const SkillsContainer = styled.div`

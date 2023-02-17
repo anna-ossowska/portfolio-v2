@@ -1,13 +1,13 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import { NumberedHeader } from '../../Main/components';
+import { NumberedHeader } from '../../../common/index';
 import { ProjectContainer } from '../components/index';
 
 const ProjectTitleWrapper = styled.h2`
     & h2 {
         color: var(--color-text-light-2);
         font-size: 66px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
         letter-spacing: 0.06rem;
     }
     /* 
@@ -89,6 +89,11 @@ const UserStoryWrapper = styled.div`
 
     & p {
         color: var(--color-text-light-1);
+    }
+
+    & img {
+        display: inline-block;
+        width: 100%;
     }
 
     &:nth-child(2n + 1) {

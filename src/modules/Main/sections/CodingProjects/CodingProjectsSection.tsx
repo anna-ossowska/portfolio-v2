@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+import { NumberedHeader } from '../../../../common/index';
 import {
     advisionTechList,
     buddyLinguaTechList,
@@ -8,7 +9,7 @@ import {
     restCountriesTechList,
     scentShopTechList,
 } from '../../../../config/data';
-import { NumberedHeader, StyledSection } from '../../components/index';
+import { StyledSection } from '../../components/index';
 import { CodingProjectCard } from './components/index';
 
 const CodingProjectsWrapper = styled.div`

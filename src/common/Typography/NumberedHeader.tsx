@@ -12,15 +12,17 @@ const Header = styled.h3`
     font-size: 30px;
     letter-spacing: 0.06rem;
     text-transform: capitalize;
-    /* 0 */
     margin: 10px 0 35px;
+
+    @media only screen and (max-width: 992px) {
+        font-size: 28px;
+    }
 
     @media only screen and (max-width: 600px) {
         font-size: 22px;
     }
 `;
 
-// 15;
 const Divider = styled.div`
     height: 0.5px;
     background-color: var(--color-divider);
@@ -28,12 +30,16 @@ const Divider = styled.div`
     margin-top: -20px;
     margin-left: 15px;
 
+    @media only screen and (max-width: 992px) {
+        width: 250px;
+    }
+
     @media only screen and (max-width: 768px) {
         width: 200px;
     }
 
     @media only screen and (max-width: 600px) {
-        width: 100px;
+        display: none;
     }
 `;
 

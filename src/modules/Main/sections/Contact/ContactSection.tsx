@@ -36,7 +36,6 @@ const StyledParagraph = styled.p`
 const Contact = (): ReactElement => {
     return (
         <StyledSection>
-            {/* <NumberedHeader headerNumber="05" title="Get In Touch" /> */}
             <Wrapper>
                 <FeaturedParagraph>05. Contact</FeaturedParagraph>
                 <StyledHeader>Get In Touch</StyledHeader>

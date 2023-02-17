@@ -1,7 +1,8 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import Profile from '../../../../assets/images/profile.png';
-import { NumberedHeader, StyledSection } from '../../components/index';
+import { NumberedHeader } from '../../../../common/index';
+import { StyledSection } from '../../components/index';
 import { StyledParagraph } from './components/index';
 
 const AboutSectionContainer = styled.div`

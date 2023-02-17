@@ -5,7 +5,7 @@ import Description from './Description';
 import PrimaryHeading from './PrimaryHeading';
 
 const Container = styled.section`
-    padding: 150px 150px;
+    padding: 150px;
 
     @media only screen and (max-width: 992px) {
         padding: 150px 100px;

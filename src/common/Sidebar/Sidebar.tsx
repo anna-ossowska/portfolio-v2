@@ -129,11 +129,6 @@ const BlurredBackground = styled.div`
     z-index: 6;
     backdrop-filter: blur(5px);
     transition: opacity 0.1s linear, visibility 0.1s linear;
-
-    @media only screen and (max-width: 600px) {
-        padding: 30px;
-        width: min(90vw, 400px);
-    }
 `;
 
 const Sidebar = (): ReactElement => {

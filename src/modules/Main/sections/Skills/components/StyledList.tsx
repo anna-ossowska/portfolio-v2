@@ -55,7 +55,7 @@ const StyledList = ({ skills, isTwoColumnLayout }: StyledListProps): ReactElemen
     return (
         <List isTwoColumnLayout={isTwoColumnLayout}>
             {skills.map((skill, index) => {
-                return <ListElement key={`${skill}-${index}`}>{skill}</ListElement>;
+                return <ListElement key={`skill-${index}`}>{skill}</ListElement>;
             })}
         </List>
     );

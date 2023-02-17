@@ -1,3 +1,5 @@
+// SKILLS
+
 export const frontEndSkills = [
     'React',
     'Styled Components',
@@ -36,14 +38,48 @@ export const libraries = [
     'React Draggable',
 ];
 
+// COMMERCIAL PROJECTS
+
+// 1. Solintegra
+
+export const solintegraIndustryList = ['Renewable Energy', 'Construction'];
+
+export const solintegraRoleList = ['Lead Front-end Developer', 'Consultant'];
+
 export const solintegraTechList = ['React', 'TypeScript', 'AWS Aplify', 'Material UI', 'Redux Toolkit'];
+
+export const solintegraRespList = [
+    'Implementing the front-end architecture, authentication, and state management',
+    'Integrating the application with AWS Amplify',
+    'Creating the responsive user interface based on Figma prototypes',
+    'Implementing a Solar Roof Calculator',
+    'Writing the technical documentation',
+];
+
+export const solintegraUserStoriesList = [
+    'As admin, I want to see an overview of all inquiries in the system so that I can track their status and see if a customer needs attention',
+    'As admin, I want to be able to administrate individual inquiries to make sure changes are documented where everybody involved can be informed',
+    'As a partner I want to share details about a lead with a sub-contractor so that they can give me prices on their work contribution',
+    'As a sub-contractor I want to see the information about a lead so that I can estimate my work',
+];
+
+export const userStoriesImages = [
+    'https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80',
+];
+
+// 2. Life@Work
 
 export const lifeAtWorkTechList = ['React', 'TypeScript', 'React Query', 'Styled Components', 'C#'];
 
+// 3. Fatland
+
 export const fatlandTechList = ['React', 'JavaScript', 'Styled Components', 'Bootstrap', 'C#'];
+
+// 4. Udemy
 
 export const udemyCourseTechList = ['PowerPoint', 'VBA', 'XML', 'Camtasia'];
 
+// CODING PROJECTS
 export const foodlyTechList = ['React', 'Redux', 'Toolkit', 'Firebase'];
 
 export const scentShopTechList = ['C#', 'ASP.NET', 'Entity Framework'];

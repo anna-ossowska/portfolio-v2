@@ -32,7 +32,7 @@ const TechnologyList = ({ techList }: TechnologyListProps): ReactElement => {
     return (
         <CodingProjectTechnologyList>
             {techList.map((el, index) => {
-                return <li key={`${techList}-${index}`}>{el}</li>;
+                return <li key={`techList-${index}`}>{el}</li>;
             })}
         </CodingProjectTechnologyList>
     );

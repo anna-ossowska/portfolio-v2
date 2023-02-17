@@ -12,6 +12,7 @@ const Header = styled.h3`
     font-size: 30px;
     letter-spacing: 0.06rem;
     text-transform: capitalize;
+    /* 0 */
     margin: 10px 0 35px;
 
     @media only screen and (max-width: 600px) {
@@ -19,6 +20,7 @@ const Header = styled.h3`
     }
 `;
 
+// 15;
 const Divider = styled.div`
     height: 0.5px;
     background-color: var(--color-divider);

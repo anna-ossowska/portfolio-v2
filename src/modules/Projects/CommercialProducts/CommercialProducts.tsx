@@ -10,11 +10,6 @@ const ProjectTitleWrapper = styled.h2`
         margin-bottom: 15px;
         letter-spacing: 0.06rem;
     }
-    /* 
-    & div {
-        border-top: 1px solid var(--color-divider);
-        margin: 10px 0;
-    } */
 `;
 
 const ProjectIntro = styled.section`
@@ -112,7 +107,6 @@ const CommercialProducts = (): ReactElement => {
                         <br />
                         Partner Portal
                     </h2>
-                    <div />
                 </ProjectTitleWrapper>
                 <ProjectMainInfoWrapper>
                     <div>

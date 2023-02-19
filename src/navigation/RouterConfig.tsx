@@ -1,7 +1,8 @@
 import { ReactElement } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from '../App';
-import { CodingProjects, CommercialProductsOverview } from '../modules/Projects/index';
+import { FatlandProject, LifeAtWorkProject, SolintegraProject } from '../modules/Projects/CommercialProducts/index';
+import { CodingProjects, CommercialProducts } from '../modules/Projects/index';
 import {
     ADVISION_PROJECT,
     BUDDY_LINGUA_PROJECT,
@@ -9,7 +10,7 @@ import {
     COMMERCIAL_PRODUCTS,
     FOODLY_PROJECT,
     LIFE_AT_WORK_PROJECT,
-    MITTFATLAND_PROJECT,
+    FATLAND_PROJECT,
     OUTDOOR_PROJECT,
     REST_COUNTRIES_PROJECT,
     ROOT,
@@ -24,18 +25,19 @@ const RouterConfig = (): ReactElement => {
             <Routes>
                 <Route path={ROOT} element={<App />}>
                     <Route path={CODING_PROJECTS} element={<CodingProjects />}>
-                        <Route path={FOODLY_PROJECT} element={<CommercialProductsOverview />} />
-                        <Route path={SCENTSHOP_PROJECT} element={<CommercialProductsOverview />} />
-                        <Route path={OUTDOOR_PROJECT} element={<CommercialProductsOverview />} />
-                        <Route path={REST_COUNTRIES_PROJECT} element={<CommercialProductsOverview />} />
-                        <Route path={ADVISION_PROJECT} element={<CommercialProductsOverview />} />
-                        <Route path={BUDDY_LINGUA_PROJECT} element={<CommercialProductsOverview />} />
+                        <Route path={FOODLY_PROJECT} element={<CommercialProducts />} />
+                        <Route path={SCENTSHOP_PROJECT} element={<CommercialProducts />} />
+                        <Route path={OUTDOOR_PROJECT} element={<CommercialProducts />} />
+                        <Route path={REST_COUNTRIES_PROJECT} element={<CommercialProducts />} />
+                        <Route path={ADVISION_PROJECT} element={<CommercialProducts />} />
+                        <Route path={BUDDY_LINGUA_PROJECT} element={<CommercialProducts />} />
                     </Route>
-                    <Route path={COMMERCIAL_PRODUCTS} element={<CommercialProductsOverview />}>
-                        <Route path={SOLINTEGRA_PROJECT} element={<CommercialProductsOverview />} />
-                        <Route path={MITTFATLAND_PROJECT} element={<CommercialProductsOverview />} />
-                        <Route path={LIFE_AT_WORK_PROJECT} element={<CommercialProductsOverview />} />
-                        <Route path={UDEMY_PROJECT} element={<CommercialProductsOverview />} />
+                    {/* TODO Redirect to Main if there is no third segment */}
+                    <Route path={COMMERCIAL_PRODUCTS} element={<CommercialProducts />}>
+                        <Route path={SOLINTEGRA_PROJECT} element={<SolintegraProject />} />
+                        <Route path={FATLAND_PROJECT} element={<FatlandProject />} />
+                        <Route path={LIFE_AT_WORK_PROJECT} element={<LifeAtWorkProject />} />
+                        <Route path={UDEMY_PROJECT} element={<CommercialProducts />} />
                     </Route>
                 </Route>
             </Routes>

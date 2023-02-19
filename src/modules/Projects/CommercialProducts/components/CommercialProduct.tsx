@@ -103,8 +103,8 @@ interface CommercialProductProps {
     projectDescription: string;
     techList: string[];
     respList: string[];
-    userStoriesList: string[];
-    userStoriesImages: string[];
+    userStoriesList?: string[];
+    userStoriesImages?: string[];
 }
 
 const CommercialProduct = ({
@@ -158,18 +158,20 @@ const CommercialProduct = ({
                 </StyledList>
             </ProjectResponsibilities>
 
-            <UserStoriesContainer>
-                <NumberedHeader headerNumber="03" title="Selected User Stories" />
-                {userStoriesList.map((el, index) => {
-                    return (
-                        <UserStory
-                            key={`userStory-${index}`}
-                            userStory={el}
-                            userStoryImage={userStoriesImages[index]}
-                        />
-                    );
-                })}
-            </UserStoriesContainer>
+            {userStoriesList && userStoriesImages && (
+                <UserStoriesContainer>
+                    <NumberedHeader headerNumber="03" title="Selected User Stories" />
+                    {userStoriesList.map((el, index) => {
+                        return (
+                            <UserStory
+                                key={`userStory-${index}`}
+                                userStory={el}
+                                userStoryImage={userStoriesImages[index]}
+                            />
+                        );
+                    })}
+                </UserStoriesContainer>
+            )}
         </ProjectContainer>
     );
 };

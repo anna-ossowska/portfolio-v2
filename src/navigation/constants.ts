@@ -2,7 +2,7 @@ export const ROOT = '/';
 
 export const COMMERCIAL_PRODUCTS = 'commercial-products';
 export const SOLINTEGRA_PROJECT = 'solintegra';
-export const MITTFATLAND_PROJECT = 'mittfatland';
+export const FATLAND_PROJECT = 'fatland';
 export const LIFE_AT_WORK_PROJECT = 'life-at-work';
 export const UDEMY_PROJECT = 'udemy-project';
 

@@ -44,9 +44,24 @@ export const libraries = [
 
 export const solintegraIndustryList = ['Renewable Energy', 'Construction'];
 
-export const solintegraRoleList = ['Lead Front-end Developer', 'Consultant'];
+export const solintegraRolesList = ['Lead Front-end Developer', 'Consultant'];
 
-export const solintegraTechList = ['React', 'TypeScript', 'AWS Aplify', 'Material UI', 'Redux Toolkit'];
+export const solintegraTechList1 = ['AWS Aplify', 'React', 'TypeScript', 'Redux Toolkit', 'Material UI'];
+
+export const solintegraTechList2 = [
+    'AWS Amplify',
+    'React',
+    'TypeScript',
+    'Redux Toolkit',
+    'React Query',
+    'React Hook Form',
+    'Yup',
+    'Material UI (MUI)',
+    'Styled Components',
+    'GitHub',
+    'Monday',
+    'Confluence',
+];
 
 export const solintegraRespList = [
     'Implementing the front-end architecture, authentication, and state management',
@@ -54,6 +69,7 @@ export const solintegraRespList = [
     'Creating the responsive user interface based on Figma prototypes',
     'Implementing a Solar Roof Calculator',
     'Writing the technical documentation',
+    'Working with the Agile Scrum methodology',
 ];
 
 export const solintegraUserStoriesList = [
@@ -69,15 +85,63 @@ export const userStoriesImages = [
 
 // 2. Life@Work
 
-export const lifeAtWorkTechList = ['React', 'TypeScript', 'React Query', 'Styled Components', 'C#'];
+export const lifeAtWorkIndustryList = ['Retail'];
+
+export const lifeAtWorkRolesList = ['Front-end Developer'];
+
+export const lifeAtWorkTechList1 = ['React', 'TypeScript', 'React Query', 'Styled Components', 'C#'];
+
+export const lifeAtWorkTechList2 = [
+    'React',
+    'TypeScript',
+    'C#',
+    'Azure',
+    'DevOps',
+    'Styled Components',
+    'React Query',
+    'React Hook Form',
+    'Yup',
+];
+
+export const lifeAtWorkRespList = [
+    'Assisting in the implementation of the ticketing system',
+    'Creating the responsive user interface based of Figma prototypes',
+    'Helping the team to reduce the technical debt by managing Backlog task',
+    'Working with the Agile Scrum methodology',
+    'Code reviewing',
+];
 
 // 3. Fatland
+export const fatlandIndustryList = ['Food Production'];
 
-export const fatlandTechList = ['React', 'JavaScript', 'Styled Components', 'Bootstrap', 'C#'];
+export const fatlandRolesList = ['Front-end Developer', 'Consultant'];
+
+export const fatlandTechList1 = ['React', 'JavaScript', 'Styled Components', 'Bootstrap', 'C#'];
+
+export const fatlandTechList2 = [
+    'React',
+    'JavaScript',
+    'C#',
+    'Azure',
+    'DevOps',
+    'Semantic UI',
+    'Styled Components',
+    'React Table',
+    'React Hook Form',
+    'Moment',
+];
+
+export const fatlandRespList = [
+    'Implementing dynamic dashboards for tracking the livestock data',
+    'Creating the responsive user interface based of Figma prototypes',
+    'Code base management',
+    'Code reviewing',
+    'Working with the Agile Scrum methodology',
+];
 
 // 4. Udemy
 
-export const udemyCourseTechList = ['PowerPoint', 'VBA', 'XML', 'Camtasia'];
+export const udemyCourseTechList1 = ['PowerPoint', 'VBA', 'XML', 'Camtasia'];
 
 // CODING PROJECTS
 export const foodlyTechList = ['React', 'Redux', 'Toolkit', 'Firebase'];

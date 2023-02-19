@@ -1,3 +1,12 @@
+import Solintegra11 from '../assets/images/projects/solintegra/solintegra-1-1.jpg';
+import Solintegra22 from '../assets/images/projects/solintegra/solintegra-2-2.jpg';
+import Solintegra33 from '../assets/images/projects/solintegra/solintegra-3-3.jpg';
+import Solintegra43 from '../assets/images/projects/solintegra/solintegra-4-3.jpg';
+import Solintegra53 from '../assets/images/projects/solintegra/solintegra-5-3.jpg';
+import Solintegra63 from '../assets/images/projects/solintegra/solintegra-6-3.jpg';
+import Solintegra73 from '../assets/images/projects/solintegra/solintegra-7-3.jpg';
+import Solintegra83 from '../assets/images/projects/solintegra/solintegra-8-3.jpg';
+
 // SKILLS
 
 export const frontEndSkills = [
@@ -76,11 +85,46 @@ export const solintegraUserStoriesList = [
     'As admin, I want to see an overview of all inquiries in the system so that I can track their status and see if a customer needs attention',
     'As admin, I want to be able to administrate individual inquiries to make sure changes are documented where everybody involved can be informed',
     'As a partner I want to share details about a lead with a sub-contractor so that they can give me prices on their work contribution',
-    'As a sub-contractor I want to see the information about a lead so that I can estimate my work',
 ];
 
-export const userStoriesImages = [
-    'https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80',
+export interface userStoriesImagesDto {
+    imageGroup: number;
+    path: string;
+}
+
+export const userStoriesImages: userStoriesImagesDto[] = [
+    {
+        imageGroup: 1,
+        path: Solintegra11,
+    },
+    {
+        imageGroup: 2,
+        path: Solintegra22,
+    },
+    {
+        imageGroup: 3,
+        path: Solintegra33,
+    },
+    {
+        imageGroup: 3,
+        path: Solintegra43,
+    },
+    {
+        imageGroup: 3,
+        path: Solintegra53,
+    },
+    {
+        imageGroup: 3,
+        path: Solintegra63,
+    },
+    {
+        imageGroup: 3,
+        path: Solintegra73,
+    },
+    {
+        imageGroup: 3,
+        path: Solintegra83,
+    },
 ];
 
 // 2. Life@Work

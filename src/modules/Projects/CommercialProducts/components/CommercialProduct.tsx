@@ -1,6 +1,7 @@
 import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
 import { NumberedHeader } from '../../../../common/index';
+import { userStoriesImagesDto } from '../../../../config/data';
 import { ProjectContainer } from '../../components/index';
 import { UserStory } from './index';
 
@@ -104,7 +105,7 @@ interface CommercialProductProps {
     techList: string[];
     respList: string[];
     userStoriesList?: string[];
-    userStoriesImages?: string[];
+    userStoriesImages?: userStoriesImagesDto[];
 }
 
 const CommercialProduct = ({
@@ -166,7 +167,8 @@ const CommercialProduct = ({
                             <UserStory
                                 key={`userStory-${index}`}
                                 userStory={el}
-                                userStoryImage={userStoriesImages[index]}
+                                imageGroup={index + 1}
+                                userStoriesImages={userStoriesImages}
                             />
                         );
                     })}

@@ -1,10 +1,11 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+import { userStoriesImagesDto } from '../../../../config/data';
 
 const UserStoryWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
     align-items: flex-start;
 
     & p {
@@ -14,6 +15,8 @@ const UserStoryWrapper = styled.div`
     & img {
         display: inline-block;
         width: 100%;
+        margin-bottom: 40px;
+        border: solid 0.5px var(--color-text-main);
     }
 
     &:nth-child(2n + 1) {
@@ -24,19 +27,19 @@ const UserStoryWrapper = styled.div`
 
 interface UserStoryProps {
     userStory: string;
-    userStoryImage: string;
+    imageGroup: number;
+    userStoriesImages: userStoriesImagesDto[];
 }
 
-const UserStory = ({ userStory, userStoryImage }: UserStoryProps): ReactElement => {
+const UserStory = ({ userStory, imageGroup, userStoriesImages }: UserStoryProps): ReactElement => {
     return (
         <UserStoryWrapper>
             <p>{userStory}</p>
-            <img
-                src={
-                    'https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80'
-                }
-                alt="projectImage"
-            />
+            <>
+                {userStoriesImages.map((el) => {
+                    return el.imageGroup === imageGroup && <img src={el.path} alt="projectImage" />;
+                })}
+            </>
         </UserStoryWrapper>
     );
 };

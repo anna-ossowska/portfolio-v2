@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import SolinegraImg from '../../../../assets/images/projects/solintegra/solintegra-main.jpg';
 import { NumberedHeader } from '../../../../common/index';
 import {
     fatlandTechList1,
@@ -20,7 +21,7 @@ const CommercialProductsSection = (): ReactElement => {
                 techList={solintegraTechList1}
                 githubLink="https://github.com/anna-ossowska"
                 externalLink="https://github.com/anna-ossowska"
-                imagePath="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80"
+                imagePath={SolinegraImg}
             />
 
             <ProjectCard

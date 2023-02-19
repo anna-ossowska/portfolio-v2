@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from '../App';
+import { FoodlyProject } from '../modules/Projects/CodingProjects/index';
 import { FatlandProject, LifeAtWorkProject, SolintegraProject } from '../modules/Projects/CommercialProducts/index';
 import { CodingProjects, CommercialProducts } from '../modules/Projects/index';
 import {
@@ -25,7 +26,7 @@ const RouterConfig = (): ReactElement => {
             <Routes>
                 <Route path={ROOT} element={<App />}>
                     <Route path={CODING_PROJECTS} element={<CodingProjects />}>
-                        <Route path={FOODLY_PROJECT} element={<CommercialProducts />} />
+                        <Route path={FOODLY_PROJECT} element={<FoodlyProject />} />
                         <Route path={SCENTSHOP_PROJECT} element={<CommercialProducts />} />
                         <Route path={OUTDOOR_PROJECT} element={<CommercialProducts />} />
                         <Route path={REST_COUNTRIES_PROJECT} element={<CommercialProducts />} />

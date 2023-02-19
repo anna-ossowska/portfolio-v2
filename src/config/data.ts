@@ -188,9 +188,42 @@ export const fatlandRespList = [
 export const udemyCourseTechList1 = ['PowerPoint', 'VBA', 'XML', 'Camtasia'];
 
 // CODING PROJECTS
-export const foodlyTechList = ['React', 'Redux', 'Toolkit', 'Firebase'];
 
-export const scentShopTechList = ['C#', 'ASP.NET', 'Entity Framework'];
+// 1. Foodly
+export const foodlyTechList1 = ['React', 'Redux Toolkit', 'Firebase'];
+
+export const foodlyTechList2 = [
+    'ReactJS',
+    'Redux Toolkit',
+    'React Router Dom',
+    'Firebase',
+    'Netlify',
+    'Git',
+    'Github',
+    'Figma',
+    'Adobe Creative Cloud',
+];
+export const foodlyDescription =
+    'Foodly is a restaurant order taking app built in ReactJS. The potential user of the website can search through available meals, add/remove meals to/from the shopping cart, fill the order form and complete the order. The application relies heavily on Redux Toolkit for the state management, as well as uses the Firebase real-time database.Foodly app is responsive on all devices and was deployed with Netlify.';
+
+export const scentShopTechList1 = ['C#', 'ASP.NET', 'Entity Framework'];
+
+export const scentShopTechList2 = [
+    'C#',
+    'ASP.NET Core MVC 5',
+    'Entity Framework',
+    'Azure',
+    'Bootstrap',
+    'JavaScript',
+    'Figma',
+    'Cloudinary',
+    'Adobe Creative Cloud',
+    'Git',
+    'Github',
+];
+
+export const scentShopDescription =
+    'ScentShop is a website designed for selling perfumes online. It was built mostly with C# and ASP.NET Core MVC 5. The application has the following features: add/remove a product to/from the shopping cart, complete the order, search by categories or product names, filter data, log in, sign up, as well as edit the user profile.The website uses the database, is responsive on all devices, and was deployed with Azure.';
 
 export const outdoorTechList = ['JavaScript', 'LeafletJS', 'Sass'];
 

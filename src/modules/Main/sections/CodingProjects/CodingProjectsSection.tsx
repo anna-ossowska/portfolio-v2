@@ -4,10 +4,10 @@ import { NumberedHeader } from '../../../../common/index';
 import {
     advisionTechList,
     buddyLinguaTechList,
-    foodlyTechList,
+    foodlyTechList1,
     outdoorTechList,
     restCountriesTechList,
-    scentShopTechList,
+    scentShopTechList1,
 } from '../../../../config/data';
 import { StyledSection } from '../../components/index';
 import { CodingProjectCard } from './components/index';
@@ -27,8 +27,8 @@ const CodingProjectsSectionSection = (): ReactElement => {
                 <CodingProjectsWrapper>
                     <CodingProjectCard
                         projectTitle="Foodly"
-                        projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis maiores impedit, perferendis eveniet sequi similique dolorem nobis possimus aperiam."
-                        techList={foodlyTechList}
+                        projectDescription="Foodly is a restaurant order taking app built in ReactJS. It application relies heavily on Redux Toolkit for the state management, as well as uses the Firebase real-time database."
+                        techList={foodlyTechList1}
                         projectDetailsPath="https://github.com/anna-ossowska"
                         githubLink="https://github.com/anna-ossowska"
                         externalLink="https://github.com/anna-ossowska"
@@ -37,7 +37,7 @@ const CodingProjectsSectionSection = (): ReactElement => {
                     <CodingProjectCard
                         projectTitle="ScentShop"
                         projectDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo blanditiis maiores impedit, perferendis eveniet sequi similique dolorem nobis possimus aperiam quidem cum consequatur vero laboriosam molestias debitis itaque hic ullam amet ex, doloremque beatae sed."
-                        techList={scentShopTechList}
+                        techList={scentShopTechList1}
                         projectDetailsPath="https://github.com/anna-ossowska"
                         githubLink="https://github.com/anna-ossowska"
                         externalLink="https://github.com/anna-ossowska"

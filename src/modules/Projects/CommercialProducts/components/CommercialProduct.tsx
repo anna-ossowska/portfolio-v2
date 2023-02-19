@@ -1,8 +1,7 @@
 import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
-import { NumberedHeader } from '../../../../common/index';
+import { NumberedHeader, ProjectContainer } from '../../../../common/index';
 import { userStoriesImagesDto } from '../../../../config/data';
-import { ProjectContainer } from '../../components/index';
 import { UserStory } from './index';
 
 const ProjectTitleWrapper = styled.h2`

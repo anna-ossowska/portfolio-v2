@@ -1,7 +1,11 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import { FeaturedParagraph, TextHighlight } from '../../../../common/index';
+import { FeaturedParagraph, ScrollAdjustment, TextHighlight } from '../../../../common/index';
 import { StyledSection } from '../../components/index';
+
+const MainContainer = styled.div`
+    position: relative;
+`;
 
 const StyledHeader = styled.h3`
     background-color: var(--color-background-default);
@@ -35,25 +39,28 @@ const StyledParagraph = styled.p`
 
 const Contact = (): ReactElement => {
     return (
-        <StyledSection>
-            <Wrapper>
-                <FeaturedParagraph>05. Contact</FeaturedParagraph>
-                <StyledHeader>Get In Touch</StyledHeader>
-                <StyledParagraph>
-                    My inbox is always open. Whether you have a question or just would like to say hello, please feel
-                    free to contact me at <TextHighlight isNeutralColor={true}>ossowska.anna1@gmail.com</TextHighlight>{' '}
-                    or via my{' '}
-                    <a
-                        href="https://www.linkedin.com/in/anna-ossowska-053485130/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <TextHighlight isNeutralColor={true}>LinkedIn</TextHighlight>
-                    </a>{' '}
-                    profile.
-                </StyledParagraph>
-            </Wrapper>
-        </StyledSection>
+        <MainContainer>
+            <ScrollAdjustment elementId="contact" />
+            <StyledSection>
+                <Wrapper>
+                    <FeaturedParagraph>05. Contact</FeaturedParagraph>
+                    <StyledHeader>Get In Touch</StyledHeader>
+                    <StyledParagraph>
+                        My inbox is always open. Whether you have a question or just would like to say hello, please
+                        feel free to contact me at{' '}
+                        <TextHighlight isNeutralColor={true}>ossowska.anna1@gmail.com</TextHighlight> or via my{' '}
+                        <a
+                            href="https://www.linkedin.com/in/anna-ossowska-053485130/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <TextHighlight isNeutralColor={true}>LinkedIn</TextHighlight>
+                        </a>{' '}
+                        profile.
+                    </StyledParagraph>
+                </Wrapper>
+            </StyledSection>
+        </MainContainer>
     );
 };
 

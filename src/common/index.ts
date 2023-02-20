@@ -1,6 +1,7 @@
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Layout } from './Layout/Layout';
 export { default as ProjectContainer } from './Layout/ProjectContainer';
+export { default as ScrollAdjustment } from './Layout/ScrollAdjustment';
 export { default as Navbar } from './Navbar/Navbar';
 export { default as Footer } from './Footer/Footer';
 export { default as TextHighlight } from './Typography/TextHighlight';

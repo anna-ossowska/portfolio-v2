@@ -51,6 +51,13 @@ const NavbarItem = styled.li`
 `;
 
 const Navbar = (): ReactElement => {
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+
+        if (!section) return;
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
     return (
         <NavbarContainer>
             <LogoWrapper>
@@ -58,19 +65,19 @@ const Navbar = (): ReactElement => {
             </LogoWrapper>
             <div>
                 <NavbarList>
-                    <NavbarItem>
+                    <NavbarItem onClick={() => scrollToSection('about')}>
                         <a href="/#about">About</a>
                     </NavbarItem>
-                    <NavbarItem>
+                    <NavbarItem onClick={() => scrollToSection('skills')}>
                         <a href="/#skills">Skills</a>
                     </NavbarItem>
-                    <NavbarItem>
+                    <NavbarItem onClick={() => scrollToSection('commercial-products')}>
                         <a href="/#commercial-products">Commercial products</a>
                     </NavbarItem>
-                    <NavbarItem>
+                    <NavbarItem onClick={() => scrollToSection('personal-projects')}>
                         <a href="/#personal-projects">Personal projects</a>
                     </NavbarItem>
-                    <NavbarItem>
+                    <NavbarItem onClick={() => scrollToSection('contact')}>
                         <a href="/#contact">Contact</a>
                     </NavbarItem>
                 </NavbarList>

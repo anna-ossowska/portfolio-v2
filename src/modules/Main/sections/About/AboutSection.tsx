@@ -1,9 +1,13 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import Profile from '../../../../assets/images/profile.png';
-import { NumberedHeader } from '../../../../common/index';
+import { NumberedHeader, ScrollAdjustment } from '../../../../common/index';
 import { StyledSection } from '../../components/index';
 import { StyledParagraph } from './components/index';
+
+const MainContainer = styled.div`
+    position: relative;
+`;
 
 const AboutSectionContainer = styled.div`
     display: flex;
@@ -45,32 +49,35 @@ const StyledImage = styled.img`
 
 const AboutSection = (): ReactElement => {
     return (
-        <StyledSection>
-            <NumberedHeader headerNumber="01" title="About me" />
-            <AboutSectionContainer>
-                <div>
-                    <StyledParagraph>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus itaque exercitationem
-                        explicabo numquam dolores iste ad laboriosam nobis ducimus voluptatem? Placeat magnam recusandae
-                        inventore atque, distinctio quidem officiis, accusantium, nulla ullam facere fugiat. Nostrum
-                        numquam, ullam sunt nihil corrupti vel inventore soluta dolores fugit aperiam minus repudiandae,
-                        deserunt, voluptatibus hic.
-                    </StyledParagraph>
+        <MainContainer>
+            <ScrollAdjustment elementId="about" />
+            <StyledSection>
+                <NumberedHeader headerNumber="01" title="About me" />
+                <AboutSectionContainer>
+                    <div>
+                        <StyledParagraph>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus itaque exercitationem
+                            explicabo numquam dolores iste ad laboriosam nobis ducimus voluptatem? Placeat magnam
+                            recusandae inventore atque, distinctio quidem officiis, accusantium, nulla ullam facere
+                            fugiat. Nostrum numquam, ullam sunt nihil corrupti vel inventore soluta dolores fugit
+                            aperiam minus repudiandae, deserunt, voluptatibus hic.
+                        </StyledParagraph>
 
-                    <StyledParagraph>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, cum itaque? Totam amet ipsa
-                        architecto officiis ipsum magni sequi dicta quae aliquid illum? Magnam consequuntur eligendi
-                        quidem necessitatibus asperiores similique porro non odit ut, qui iste minima ratione fugit
-                        voluptatibus, neque nemo in quia inventore magni officiis, ullam id atque? Libero iusto
-                        consequatur voluptate deserunt incidunt rerum dolor minus id temporibus qui perferendis,
-                        perspiciatis ratione.
-                    </StyledParagraph>
-                </div>
-                <ImageContainer>
-                    <StyledImage src={Profile} alt="profile" />
-                </ImageContainer>
-            </AboutSectionContainer>
-        </StyledSection>
+                        <StyledParagraph>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, cum itaque? Totam amet ipsa
+                            architecto officiis ipsum magni sequi dicta quae aliquid illum? Magnam consequuntur eligendi
+                            quidem necessitatibus asperiores similique porro non odit ut, qui iste minima ratione fugit
+                            voluptatibus, neque nemo in quia inventore magni officiis, ullam id atque? Libero iusto
+                            consequatur voluptate deserunt incidunt rerum dolor minus id temporibus qui perferendis,
+                            perspiciatis ratione.
+                        </StyledParagraph>
+                    </div>
+                    <ImageContainer>
+                        <StyledImage src={Profile} alt="profile" />
+                    </ImageContainer>
+                </AboutSectionContainer>
+            </StyledSection>
+        </MainContainer>
     );
 };
 

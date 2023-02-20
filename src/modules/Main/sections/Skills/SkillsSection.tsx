@@ -1,9 +1,13 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import { NumberedHeader } from '../../../../common/index';
+import { NumberedHeader, ScrollAdjustment } from '../../../../common/index';
 import { frontEndSkills, graphicDesignSkills, otherSkills, projectManagmentSkills } from '../../../../config/data';
 import { StyledSection } from '../../components/index';
 import { StyledList } from './components/index';
+
+const MainContainer = styled.div`
+    position: relative;
+`;
 
 const SkillsContainer = styled.div`
     display: grid;
@@ -39,28 +43,30 @@ const ListHeader = styled.h4`
 
 const SkillsSection = (): ReactElement => {
     return (
-        <StyledSection>
-            <NumberedHeader headerNumber="02" title="Skills" />
-
-            <SkillsContainer>
-                <SkillsWrapper>
-                    <ListHeader>Front-end Development:</ListHeader>
-                    <StyledList isTwoColumnLayout={true} skills={frontEndSkills} />
-                </SkillsWrapper>
-                <SkillsWrapper>
-                    <ListHeader>Other Development Tools:</ListHeader>
-                    <StyledList isTwoColumnLayout={false} skills={otherSkills} />
-                </SkillsWrapper>
-                <SkillsWrapper>
-                    <ListHeader>Project Management:</ListHeader>
-                    <StyledList isTwoColumnLayout={false} skills={projectManagmentSkills} />
-                </SkillsWrapper>
-                <SkillsWrapper>
-                    <ListHeader>Graphic & Web Design:</ListHeader>
-                    <StyledList isTwoColumnLayout={false} skills={graphicDesignSkills} />
-                </SkillsWrapper>
-            </SkillsContainer>
-        </StyledSection>
+        <MainContainer>
+            <ScrollAdjustment elementId="skills" />
+            <StyledSection>
+                <NumberedHeader headerNumber="02" title="Skills" />
+                <SkillsContainer>
+                    <SkillsWrapper>
+                        <ListHeader>Front-end Development:</ListHeader>
+                        <StyledList isTwoColumnLayout={true} skills={frontEndSkills} />
+                    </SkillsWrapper>
+                    <SkillsWrapper>
+                        <ListHeader>Other Development Tools:</ListHeader>
+                        <StyledList isTwoColumnLayout={false} skills={otherSkills} />
+                    </SkillsWrapper>
+                    <SkillsWrapper>
+                        <ListHeader>Project Management:</ListHeader>
+                        <StyledList isTwoColumnLayout={false} skills={projectManagmentSkills} />
+                    </SkillsWrapper>
+                    <SkillsWrapper>
+                        <ListHeader>Graphic & Web Design:</ListHeader>
+                        <StyledList isTwoColumnLayout={false} skills={graphicDesignSkills} />
+                    </SkillsWrapper>
+                </SkillsContainer>
+            </StyledSection>
+        </MainContainer>
     );
 };
 

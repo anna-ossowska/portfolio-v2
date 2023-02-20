@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import scrollToSection from '../utils';
 
 interface StyledButtonProps {
     large: boolean;
@@ -31,15 +32,21 @@ interface ButtonProps {
     message: string;
     large: boolean;
     path?: string;
+    isScrolling?: boolean;
 }
 
-const Button = ({ message, large, path }: ButtonProps): ReactElement => {
+const Button = ({ message, large, path, isScrolling = false }: ButtonProps): ReactElement => {
     const navigate = useNavigate();
 
     const handleButtonClick = () => {
+        if (!isScrolling) {
+            if (!path) return;
+            navigate(`${path}`, { replace: true });
+            window.scrollTo(0, 0);
+        }
+
         if (!path) return;
-        navigate(`${path}`, { replace: true });
-        window.scrollTo(0, 0);
+        scrollToSection(path);
     };
 
     return (

@@ -66,7 +66,7 @@ const Banner = (): ReactElement => {
                     and creating scalable products with great user experiences.
                 </Description>
                 <ButtonContainer>
-                    <Button message="Check out my projects" large={true} />
+                    <Button message="Check out my projects" large={true} path="commercial-products" isScrolling />
                 </ButtonContainer>
             </div>
             <ImageWrpapper>

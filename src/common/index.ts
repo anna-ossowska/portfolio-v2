@@ -9,3 +9,4 @@ export { default as FeaturedParagraph } from './Typography/FeaturedParagraph';
 export { default as NumberedHeader } from './Typography/NumberedHeader';
 export { default as RegularHeader } from './Typography/RegularHeader';
 export { default as Button } from './Button/Button';
+export { default as scrollToSection } from './utils';

@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import Logo from '../../assets/images/logo.png';
+import { scrollToSection } from '../index';
 import Sidebar from '../Sidebar/Sidebar';
 
 const NavbarContainer = styled.nav`
@@ -51,13 +52,6 @@ const NavbarItem = styled.li`
 `;
 
 const Navbar = (): ReactElement => {
-    const scrollToSection = (sectionId: string) => {
-        const section = document.getElementById(sectionId);
-
-        if (!section) return;
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    };
-
     return (
         <NavbarContainer>
             <LogoWrapper>

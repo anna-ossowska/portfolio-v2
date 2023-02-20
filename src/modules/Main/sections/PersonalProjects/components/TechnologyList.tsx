@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 
-const CodingProjectTechnologyList = styled.ul`
+const PersonalProjectTechnologyList = styled.ul`
     display: flex;
     gap: 18px;
     list-style-type: none;
@@ -30,11 +30,11 @@ interface TechnologyListProps {
 }
 const TechnologyList = ({ techList }: TechnologyListProps): ReactElement => {
     return (
-        <CodingProjectTechnologyList>
+        <PersonalProjectTechnologyList>
             {techList.map((el, index) => {
                 return <li key={`techList-${index}`}>{el}</li>;
             })}
-        </CodingProjectTechnologyList>
+        </PersonalProjectTechnologyList>
     );
 };
 

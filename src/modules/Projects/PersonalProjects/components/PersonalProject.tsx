@@ -79,7 +79,7 @@ const ProjectTechnologyList = styled.section``;
 
 const ProjectImagesContainer = styled.section``;
 
-interface CodingProjectProps {
+interface PersonalProjectProps {
     projectTitle: string | ReactNode;
     yearOfCreation: string;
     projectLink: string;
@@ -89,7 +89,7 @@ interface CodingProjectProps {
     imagePaths?: string[];
 }
 
-const CodingProject = ({
+const PersonalProject = ({
     projectTitle,
     yearOfCreation,
     projectLink,
@@ -97,7 +97,7 @@ const CodingProject = ({
     projectDescription,
     techList,
     imagePaths,
-}: CodingProjectProps): ReactElement => {
+}: PersonalProjectProps): ReactElement => {
     return (
         <ProjectContainer>
             <ProjectIntro>
@@ -134,13 +134,15 @@ const CodingProject = ({
                 </StyledList>
             </ProjectTechnologyList>
 
-            <ProjectImagesContainer>
-                {imagePaths?.map((path, index) => {
-                    return <img key={`codingProject-img-${index}`} src={path} alt="codingProject" />;
-                })}
-            </ProjectImagesContainer>
+            {imagePaths && (
+                <ProjectImagesContainer>
+                    {imagePaths?.map((path, index) => {
+                        return <img key={`personalProject-img-${index}`} src={path} alt="personalProject" />;
+                    })}
+                </ProjectImagesContainer>
+            )}
         </ProjectContainer>
     );
 };
 
-export default CodingProject;
+export default PersonalProject;

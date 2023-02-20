@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import {
+    lifeAtWorkDescription,
     lifeAtWorkIndustryList,
     lifeAtWorkRespList,
     lifeAtWorkRolesList,
@@ -14,7 +15,7 @@ const LifeAtWorkProject = (): ReactElement => {
                 projectTitle={<>Life@Work</>}
                 industryList={lifeAtWorkIndustryList}
                 rolesList={lifeAtWorkRolesList}
-                projectDescription="Life@Work is a digital platform where building owners have an opportunity to collect all services and resources for a building in a common portal. Thus, both tenants, operating organizations and building owners can use a common digital solution for everything to do with a building, as well as have access to services based on their role and needs.."
+                projectDescription={lifeAtWorkDescription}
                 techList={lifeAtWorkTechList2}
                 respList={lifeAtWorkRespList}
             />

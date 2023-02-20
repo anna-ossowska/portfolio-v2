@@ -4,7 +4,7 @@ import {
     AboutSection,
     SkillsSection,
     CommercialProductsSection,
-    CodingProjectsSection,
+    PersonalProjectsSection,
     ContactSection,
 } from './sections/index';
 
@@ -15,7 +15,7 @@ const Main = (): ReactElement => {
             <AboutSection />
             <SkillsSection />
             <CommercialProductsSection />
-            <CodingProjectsSection />
+            <PersonalProjectsSection />
             <ContactSection />
         </div>
     );

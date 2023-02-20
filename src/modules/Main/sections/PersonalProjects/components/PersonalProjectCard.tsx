@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { IconExternalLink, IconFolder, IconGithub } from '../../../../../assets/icons/index';
 import { TechnologyList } from './index';
 
-const CodingProjectContainer = styled.div`
+const PersonalProjectContainer = styled.div`
     background: var(--color-primary-dark);
     height: 100%;
     padding: 20px;
@@ -71,7 +71,7 @@ const IconSubGroup = styled.div`
     gap: 15px;
 `;
 
-interface CodingProjectCardProps {
+interface PersonalProjectCardProps {
     projectTitle: string;
     projectDescription: string;
     techList: string[];
@@ -80,16 +80,16 @@ interface CodingProjectCardProps {
     externalLink: string;
 }
 
-const CodingProjectCard = ({
+const PersonalProjectCard = ({
     projectTitle,
     projectDescription,
     techList,
     projectDetailsPath,
     githubLink,
     externalLink,
-}: CodingProjectCardProps): ReactElement => {
+}: PersonalProjectCardProps): ReactElement => {
     return (
-        <CodingProjectContainer>
+        <PersonalProjectContainer>
             <div>
                 <IconGroup>
                     <a href={projectDetailsPath} target="_blank" rel="noopener noreferrer">
@@ -108,8 +108,8 @@ const CodingProjectCard = ({
                 <p>{projectDescription}</p>
             </div>
             <TechnologyList techList={techList} />
-        </CodingProjectContainer>
+        </PersonalProjectContainer>
     );
 };
 
-export default CodingProjectCard;
+export default PersonalProjectCard;

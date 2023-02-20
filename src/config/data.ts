@@ -87,6 +87,9 @@ export const solintegraUserStoriesList = [
     'As a partner I want to share details about a lead with a sub-contractor so that they can give me prices on their work contribution',
 ];
 
+export const solintegraDescription =
+    'Solintegra is a back-office solution where Partners are empowered to take part in the green shift by getting the know-how and possibility to easily estimate prices and number of solar panels fitting a roof. In addition, the portal helps with the process of advising customers independently on the use, planning and pricing for building integrated solar panel solutions (BIPV).';
+
 export interface userStoriesImagesDto {
     imageGroup: number;
     path: string;
@@ -147,6 +150,9 @@ export const lifeAtWorkTechList2 = [
     'Yup',
 ];
 
+export const lifeAtWorkDescription =
+    'Life@Work is a digital platform where building owners have an opportunity to collect all services and resources for a building in a common portal. Thus, both tenants, operating organizations and building owners can use a common digital solution for everything to do with a building, as well as have access to services based on their role and needs.';
+
 export const lifeAtWorkRespList = [
     'Assisting in the implementation of the ticketing system',
     'Creating the responsive user interface based of Figma prototypes',
@@ -174,6 +180,9 @@ export const fatlandTechList2 = [
     'React Hook Form',
     'Moment',
 ];
+
+export const fatlandDescription =
+    'MittFatland is a portal for Norwegian farmers and meat producers. It provides solutions for monitoring livestock production, as well as the efficient administration of purchase and sales activities.';
 
 export const fatlandRespList = [
     'Implementing dynamic dashboards for tracking the livestock data',
@@ -223,12 +232,41 @@ export const scentShopTechList2 = [
 ];
 
 export const scentShopDescription =
-    'ScentShop is a website designed for selling perfumes online. It was built mostly with C# and ASP.NET Core MVC 5. The application has the following features: add/remove a product to/from the shopping cart, complete the order, search by categories or product names, filter data, log in, sign up, as well as edit the user profile.The website uses the database, is responsive on all devices, and was deployed with Azure.';
+    'ScentShop is a website designed for selling perfumes online. It was built mostly with C# and ASP.NET Core MVC 5. The application has the following features: add/remove a product to/from the shopping cart, complete the order, search by categories or product names, filter data, log in, sign up, as well as edit the user profile. The website uses the database, is responsive on all devices, and was deployed with Azure.';
 
-export const outdoorTechList = ['JavaScript', 'LeafletJS', 'Sass'];
+export const outdoorTechList1 = ['JavaScript', 'LeafletJS', 'Sass'];
 
-export const restCountriesTechList = ['React', 'JavaScript'];
+export const outdoorTechList2 = [
+    'JavaScript',
+    'Leaflet JS',
+    'OpenWeatherMap API',
+    'Netlify',
+    'Sass',
+    'BEM',
+    'Figma',
+    'Adobe Creative Cloud',
+    'Git',
+    'Github',
+];
 
-export const advisionTechList = ['JavaScript', 'Sass', 'BEM', 'LightboxJS'];
+export const outdoorDescription =
+    'Outdoor is an application designed for keeping track of workout location and training frequency. This project relies heavily on DOM manipulation and OOP paradigm. The application logic was built entirely with JavaScript language. The internal features include, above all: adding/deleting workout to/from a list, calculating speed and calories burned, marking workout location on the map, as well as displaying information about the local weather coming from the API. The workout data is persisted inside the Local Storage. This application is responsive on all devices and was deployed with Netlify.';
 
-export const buddyLinguaTechList = ['Ruby on Rails', 'Bootstrap', 'Heroku'];
+export const restCountriesTechList1 = ['React', 'JavaScript'];
+
+export const advisionTechList1 = ['Sass', 'BEM', 'LightboxJS'];
+
+export const advisionTechList2 = [
+    'Sass',
+    'BEM',
+    'Lightbox JS',
+    'JavaScript',
+    'Netlify',
+    'Figma',
+    'Adobe Creative Cloud',
+    'Git',
+    'Github',
+];
+
+export const advisionDescription =
+    'Advision is a website tailored for the consulting company. During the development phase I paid special attention to creating a scalable front-end architecture by using the 7-1 pattern combined with BEM methodology. The website contains many reusable Sass components which results in consistent look and feel across all pages. The application is fully responsive and was deployed with Netlify.';

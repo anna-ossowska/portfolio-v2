@@ -1,5 +1,11 @@
 import { ReactElement } from 'react';
-import { fatlandIndustryList, fatlandRolesList, fatlandTechList2, fatlandRespList } from '../../../config/data';
+import {
+    fatlandIndustryList,
+    fatlandRolesList,
+    fatlandTechList2,
+    fatlandRespList,
+    fatlandDescription,
+} from '../../../config/data';
 import { CommercialProduct } from './components/index';
 
 const FatlandProject = (): ReactElement => {
@@ -9,7 +15,7 @@ const FatlandProject = (): ReactElement => {
                 projectTitle={<>MittFatland</>}
                 industryList={fatlandIndustryList}
                 rolesList={fatlandRolesList}
-                projectDescription="MittFatland is a portal for Norwegian farmers and meat producers. It provides solutions for monitoring livestock production, as well as the efficient administration of purchase and sales activities."
+                projectDescription={fatlandDescription}
                 techList={fatlandTechList2}
                 respList={fatlandRespList}
             />

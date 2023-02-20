@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { Outlet } from 'react-router-dom';
 
-const CodingProjects = (): ReactElement => {
+const PersonalProjects = (): ReactElement => {
     return (
         <div>
             <Outlet />
@@ -9,4 +9,4 @@ const CodingProjects = (): ReactElement => {
     );
 };
 
-export default CodingProjects;
+export default PersonalProjects;

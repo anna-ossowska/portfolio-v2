@@ -8,6 +8,14 @@ import {
     scentShopTechList1,
     udemyCourseTechList1,
 } from '../../../../config/data';
+import {
+    ADVISION_PROJECT,
+    FOODLY_PROJECT,
+    OUTDOOR_PROJECT,
+    PERSONAL_PROJECTS,
+    SCENTSHOP_PROJECT,
+    UDEMY_PROJECT,
+} from '../../../../navigation/constants';
 import { StyledSection } from '../../components/index';
 import { PersonalProjectCard } from './components/index';
 
@@ -30,6 +38,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                         techList={foodlyTechList1}
                         projectDetailsPath="https://github.com/anna-ossowska"
                         githubLink="https://github.com/anna-ossowska"
+                        internalLink={`/${PERSONAL_PROJECTS}/${FOODLY_PROJECT}`}
                         externalLink="https://github.com/anna-ossowska"
                     />
 
@@ -39,6 +48,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                         techList={outdoorTechList1}
                         projectDetailsPath="https://github.com/anna-ossowska"
                         githubLink="https://github.com/anna-ossowska"
+                        internalLink={`/${PERSONAL_PROJECTS}/${OUTDOOR_PROJECT}`}
                         externalLink="https://github.com/anna-ossowska"
                     />
 
@@ -48,6 +58,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                         techList={scentShopTechList1}
                         projectDetailsPath="https://github.com/anna-ossowska"
                         githubLink="https://github.com/anna-ossowska"
+                        internalLink={`/${PERSONAL_PROJECTS}/${SCENTSHOP_PROJECT}`}
                         externalLink="https://github.com/anna-ossowska"
                     />
 
@@ -57,6 +68,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                         techList={udemyCourseTechList1}
                         projectDetailsPath="https://github.com/anna-ossowska"
                         githubLink="https://github.com/anna-ossowska"
+                        internalLink={`/${PERSONAL_PROJECTS}/${UDEMY_PROJECT}`}
                         externalLink="https://www.udemy.com/course/use-powerpoint-like-a-professional-designer/"
                     />
 
@@ -66,6 +78,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                         techList={advisionTechList1}
                         projectDetailsPath="https://github.com/anna-ossowska"
                         githubLink="https://github.com/anna-ossowska"
+                        internalLink={`/${PERSONAL_PROJECTS}/${ADVISION_PROJECT}`}
                         externalLink="https://github.com/anna-ossowska"
                     />
                 </PersonalProjectsWrapper>

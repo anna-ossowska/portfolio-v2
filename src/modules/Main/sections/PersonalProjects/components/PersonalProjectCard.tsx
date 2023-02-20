@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { IconExternalLink, IconFolder, IconGithub } from '../../../../../assets/icons/index';
 import { TechnologyList } from './index';
@@ -77,6 +78,7 @@ interface PersonalProjectCardProps {
     techList: string[];
     projectDetailsPath: string;
     githubLink: string;
+    internalLink: string;
     externalLink: string;
 }
 
@@ -86,10 +88,18 @@ const PersonalProjectCard = ({
     techList,
     projectDetailsPath,
     githubLink,
+    internalLink,
     externalLink,
 }: PersonalProjectCardProps): ReactElement => {
+    const navigate = useNavigate();
+
+    const clickHandler = () => {
+        if (!internalLink) return;
+        navigate(`${internalLink}`, { replace: true });
+        window.scrollTo(0, 0);
+    };
     return (
-        <PersonalProjectContainer>
+        <PersonalProjectContainer onClick={clickHandler}>
             <div>
                 <IconGroup>
                     <a href={projectDetailsPath} target="_blank" rel="noopener noreferrer">

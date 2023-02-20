@@ -170,6 +170,7 @@ interface ProjectCardProps {
     contentLeft: boolean;
     techList: string[];
     githubLink?: string;
+    internalLink: string;
     externalLink: string;
     imagePath: string;
 }
@@ -180,6 +181,7 @@ const ProjectCard = ({
     contentLeft,
     techList,
     githubLink,
+    internalLink,
     externalLink,
     imagePath,
 }: ProjectCardProps): ReactElement => {
@@ -200,7 +202,7 @@ const ProjectCard = ({
                     </a>
                 </ProjectLinkList>
                 <ButtonContainer>
-                    <Button message="Learn More" large={false} />
+                    <Button message="Learn More" large={false} path={internalLink} />
                 </ButtonContainer>
             </ProjectContentWrapper>
             <ProjectImageWrapper contentLeft={contentLeft}>

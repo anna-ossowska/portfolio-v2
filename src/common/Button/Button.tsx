@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 interface StyledButtonProps {
@@ -29,10 +30,23 @@ const StyledButton = styled.button`
 interface ButtonProps {
     message: string;
     large: boolean;
+    path?: string;
 }
 
-const Button = ({ message, large }: ButtonProps): ReactElement => {
-    return <StyledButton large={large}>{message}</StyledButton>;
+const Button = ({ message, large, path }: ButtonProps): ReactElement => {
+    const navigate = useNavigate();
+
+    const handleButtonClick = () => {
+        if (!path) return;
+        navigate(`${path}`, { replace: true });
+        window.scrollTo(0, 0);
+    };
+
+    return (
+        <StyledButton large={large} onClick={handleButtonClick}>
+            {message}
+        </StyledButton>
+    );
 };
 
 export default Button;

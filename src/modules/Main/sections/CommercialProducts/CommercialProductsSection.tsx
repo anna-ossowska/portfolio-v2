@@ -2,6 +2,12 @@ import { ReactElement } from 'react';
 import SolinegraImg from '../../../../assets/images/projects/solintegra/solintegra-main.jpg';
 import { NumberedHeader } from '../../../../common/index';
 import { fatlandTechList1, lifeAtWorkTechList1, solintegraTechList1 } from '../../../../config/data';
+import {
+    COMMERCIAL_PRODUCTS,
+    FATLAND_PROJECT,
+    LIFE_AT_WORK_PROJECT,
+    SOLINTEGRA_PROJECT,
+} from '../../../../navigation/constants';
 import { StyledSection } from '../../components/index';
 import { ProjectCard } from './components/index';
 
@@ -15,7 +21,8 @@ const CommercialProductsSection = (): ReactElement => {
                 contentLeft={false}
                 techList={solintegraTechList1}
                 githubLink="https://github.com/anna-ossowska"
-                externalLink="https://github.com/anna-ossowska"
+                internalLink={`/${COMMERCIAL_PRODUCTS}/${SOLINTEGRA_PROJECT}`}
+                externalLink="https://www.solintegra.no/"
                 imagePath={SolinegraImg}
             />
 
@@ -24,8 +31,9 @@ const CommercialProductsSection = (): ReactElement => {
                 projectDescription="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
                 contentLeft={true}
                 techList={lifeAtWorkTechList1}
-                githubLink="https://github.com/anna-ossowska"
-                externalLink="https://github.com/anna-ossowska"
+                githubLink="https://www.lifeatwork.as/"
+                internalLink={`/${COMMERCIAL_PRODUCTS}/${LIFE_AT_WORK_PROJECT}`}
+                externalLink="https://veni.no/lifeatwork/"
                 imagePath="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80"
             />
 
@@ -34,8 +42,9 @@ const CommercialProductsSection = (): ReactElement => {
                 projectDescription="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
                 contentLeft={false}
                 techList={fatlandTechList1}
-                githubLink="https://github.com/anna-ossowska"
-                externalLink="https://github.com/anna-ossowska"
+                githubLink="https://mittfatland.no/signin"
+                internalLink={`/${COMMERCIAL_PRODUCTS}/${FATLAND_PROJECT}`}
+                externalLink="https://mittfatland.no/signin"
                 imagePath="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80"
             />
         </StyledSection>

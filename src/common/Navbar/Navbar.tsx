@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
+import Logo from '../../assets/images/logo.png';
 import Sidebar from '../Sidebar/Sidebar';
 
 const NavbarContainer = styled.nav`
@@ -14,6 +15,12 @@ const NavbarContainer = styled.nav`
     left: 0;
     width: 100%;
     z-index: 4;
+`;
+
+const LogoWrapper = styled.div`
+    & img {
+        height: 27px;
+    }
 `;
 
 const NavbarList = styled.ol`
@@ -46,7 +53,9 @@ const NavbarItem = styled.li`
 const Navbar = (): ReactElement => {
     return (
         <NavbarContainer>
-            <div>logo</div>
+            <LogoWrapper>
+                <img src={Logo} alt="logo" />
+            </LogoWrapper>
             <div>
                 <NavbarList>
                     <NavbarItem>

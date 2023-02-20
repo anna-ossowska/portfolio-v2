@@ -9,9 +9,10 @@ import {
     OutdoorProject,
     ScentShopProject,
 } from '../modules/Projects/PersonalProjects/index';
+import UdemyProject from '../modules/Projects/PersonalProjects/UdemyProject';
 import {
     ADVISION_PROJECT,
-    CODING_PROJECTS,
+    PERSONAL_PROJECTS,
     COMMERCIAL_PRODUCTS,
     FOODLY_PROJECT,
     LIFE_AT_WORK_PROJECT,
@@ -28,9 +29,10 @@ const RouterConfig = (): ReactElement => {
         <BrowserRouter>
             <Routes>
                 <Route path={ROOT} element={<App />}>
-                    <Route path={CODING_PROJECTS} element={<PersonalProjects />}>
+                    <Route path={PERSONAL_PROJECTS} element={<PersonalProjects />}>
                         <Route path={FOODLY_PROJECT} element={<FoodlyProject />} />
                         <Route path={OUTDOOR_PROJECT} element={<OutdoorProject />} />
+                        <Route path={UDEMY_PROJECT} element={<UdemyProject />} />
                         <Route path={SCENTSHOP_PROJECT} element={<ScentShopProject />} />
                         <Route path={ADVISION_PROJECT} element={<AdvisionProject />} />
                     </Route>
@@ -39,7 +41,6 @@ const RouterConfig = (): ReactElement => {
                         <Route path={SOLINTEGRA_PROJECT} element={<SolintegraProject />} />
                         <Route path={FATLAND_PROJECT} element={<FatlandProject />} />
                         <Route path={LIFE_AT_WORK_PROJECT} element={<LifeAtWorkProject />} />
-                        <Route path={UDEMY_PROJECT} element={<CommercialProducts />} />
                     </Route>
                 </Route>
             </Routes>

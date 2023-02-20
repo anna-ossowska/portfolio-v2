@@ -59,7 +59,7 @@ const Navbar = (): ReactElement => {
                         <a href="/#commercial-products">Commercial products</a>
                     </NavbarItem>
                     <NavbarItem>
-                        <a href="/#coding-projects">Coding projects</a>
+                        <a href="/#personal-projects">Personal projects</a>
                     </NavbarItem>
                     <NavbarItem>
                         <a href="/#contact">Contact</a>

@@ -83,7 +83,7 @@ interface PersonalProjectProps {
     projectTitle: string | ReactNode;
     yearOfCreation: string;
     projectLink: string;
-    githubLink: string;
+    githubLink?: string;
     projectDescription: string;
     techList: string[];
     imagePaths?: string[];
@@ -115,12 +115,14 @@ const PersonalProject = ({
                             {projectLink}
                         </a>
                     </div>
-                    <div>
-                        <span className="span-decorator">Github link:</span>
-                        <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                            {githubLink}
-                        </a>
-                    </div>
+                    {githubLink && (
+                        <div>
+                            <span className="span-decorator">Github link:</span>
+                            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                                {githubLink}
+                            </a>
+                        </div>
+                    )}
                 </ProjectMainInfoWrapper>
                 <div>{projectDescription}</div>
             </ProjectIntro>

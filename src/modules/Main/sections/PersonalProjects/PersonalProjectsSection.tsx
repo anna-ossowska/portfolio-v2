@@ -1,7 +1,13 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import { NumberedHeader } from '../../../../common/index';
-import { advisionTechList1, foodlyTechList1, outdoorTechList1, scentShopTechList1 } from '../../../../config/data';
+import {
+    advisionTechList1,
+    foodlyTechList1,
+    outdoorTechList1,
+    scentShopTechList1,
+    udemyCourseTechList1,
+} from '../../../../config/data';
 import { StyledSection } from '../../components/index';
 import { PersonalProjectCard } from './components/index';
 
@@ -43,6 +49,15 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                         projectDetailsPath="https://github.com/anna-ossowska"
                         githubLink="https://github.com/anna-ossowska"
                         externalLink="https://github.com/anna-ossowska"
+                    />
+
+                    <PersonalProjectCard
+                        projectTitle="Udemy Course"
+                        projectDescription="I contributed to the global learning community by designing and publishing an online course on the Udemy platform about creating PowerPoint presentations and data visualizations. Currently, the course has more than 600 active students."
+                        techList={udemyCourseTechList1}
+                        projectDetailsPath="https://github.com/anna-ossowska"
+                        githubLink="https://github.com/anna-ossowska"
+                        externalLink="https://www.udemy.com/course/use-powerpoint-like-a-professional-designer/"
                     />
 
                     <PersonalProjectCard

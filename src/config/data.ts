@@ -194,6 +194,9 @@ export const fatlandRespList = [
 
 // 4. Udemy
 
+export const udemyCourseDescription =
+    'I contributed to the global learning community by designing and publishing an online course on the Udemy platform about creating PowerPoint presentations and data visualizations. Currently, the course has more than 600 active students. It includes examples based on my professional experience as a Graphic & Web Designer. Many of the tips and tricks I share with my students originate from the questions asked by my colleagues during the training sessions and team projects. In this course I teach how to create modern slides and concept diagrams, build the professional PowerPoint templates from scratch, format photographs, use XML to program the custom colour palettes, tackle tasks faster with shortcuts and VBA macros, and more.';
+
 export const udemyCourseTechList1 = ['PowerPoint', 'VBA', 'XML', 'Camtasia'];
 
 // CODING PROJECTS

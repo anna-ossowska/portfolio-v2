@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import { IconExternalLink, IconGithub } from '../../../../../assets/icons/index';
+import { IconExternalLink, IconHome } from '../../../../../assets/icons/index';
 import { Button } from '../../../../../common/index';
 import { TechnologyList } from './index';
 
@@ -144,7 +144,7 @@ const ProjectLinkList = styled.div`
         transition: color 0.2s;
     }
 
-    & .feather-github {
+    & .feather-home {
         height: 21px;
         margin-top: 2px;
     }
@@ -169,7 +169,7 @@ interface ProjectCardProps {
     projectDescription: string;
     contentLeft: boolean;
     techList: string[];
-    githubLink?: string;
+    projectLink?: string;
     internalLink: string;
     externalLink: string;
     imagePath: string;
@@ -180,7 +180,7 @@ const ProjectCard = ({
     projectDescription,
     contentLeft,
     techList,
-    githubLink,
+    projectLink,
     internalLink,
     externalLink,
     imagePath,
@@ -193,8 +193,8 @@ const ProjectCard = ({
                 <TechnologyList techList={techList} />
                 <ProjectLinkList>
                     {
-                        <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                            <IconGithub />
+                        <a href={projectLink} target="_blank" rel="noopener noreferrer">
+                            <IconHome />
                         </a>
                     }
                     <a href={externalLink} target="_blank" rel="noopener noreferrer">

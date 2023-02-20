@@ -42,7 +42,15 @@ const Contact = (): ReactElement => {
                 <StyledParagraph>
                     My inbox is always open. Whether you have a question or just would like to say hello, please feel
                     free to contact me at <TextHighlight isNeutralColor={true}>ossowska.anna1@gmail.com</TextHighlight>{' '}
-                    or via my <TextHighlight isNeutralColor={true}>LinkedIn</TextHighlight> profile.
+                    or via my{' '}
+                    <a
+                        href="https://www.linkedin.com/in/anna-ossowska-053485130/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <TextHighlight isNeutralColor={true}>LinkedIn</TextHighlight>
+                    </a>{' '}
+                    profile.
                 </StyledParagraph>
             </Wrapper>
         </StyledSection>

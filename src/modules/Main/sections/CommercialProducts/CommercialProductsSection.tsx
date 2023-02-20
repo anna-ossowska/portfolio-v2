@@ -1,7 +1,14 @@
 import { ReactElement } from 'react';
 import SolinegraImg from '../../../../assets/images/projects/solintegra/solintegra-main.jpg';
 import { NumberedHeader } from '../../../../common/index';
-import { fatlandTechList1, lifeAtWorkTechList1, solintegraTechList1 } from '../../../../config/data';
+import {
+    fatlandDescription,
+    fatlandTechList1,
+    lifeAtWorkDescription,
+    lifeAtWorkTechList1,
+    solintegraDescription,
+    solintegraTechList1,
+} from '../../../../config/data';
 import {
     COMMERCIAL_PRODUCTS,
     FATLAND_PROJECT,
@@ -17,10 +24,10 @@ const CommercialProductsSection = (): ReactElement => {
             <NumberedHeader headerNumber="03" title="Commercial products" />
             <ProjectCard
                 projectTitle="Solintegra Partner Portal"
-                projectDescription="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+                projectDescription={solintegraDescription}
                 contentLeft={false}
                 techList={solintegraTechList1}
-                githubLink="https://github.com/anna-ossowska"
+                projectLink="https://partner.solintegra.no"
                 internalLink={`/${COMMERCIAL_PRODUCTS}/${SOLINTEGRA_PROJECT}`}
                 externalLink="https://www.solintegra.no/"
                 imagePath={SolinegraImg}
@@ -28,10 +35,10 @@ const CommercialProductsSection = (): ReactElement => {
 
             <ProjectCard
                 projectTitle="Life@Work"
-                projectDescription="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+                projectDescription={lifeAtWorkDescription}
                 contentLeft={true}
                 techList={lifeAtWorkTechList1}
-                githubLink="https://www.lifeatwork.as/"
+                projectLink="https://www.lifeatwork.as/"
                 internalLink={`/${COMMERCIAL_PRODUCTS}/${LIFE_AT_WORK_PROJECT}`}
                 externalLink="https://veni.no/lifeatwork/"
                 imagePath="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80"
@@ -39,12 +46,12 @@ const CommercialProductsSection = (): ReactElement => {
 
             <ProjectCard
                 projectTitle="Mitt Fatland"
-                projectDescription="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, quasi voluptatum quas possimus cumque illo eligendi corporis suscipit dolorum porro quisquam explicabo quis natus ipsa ipsum dolores soluta error iure. Lorem ipsum, dolor sit amet consectetur adipisicing elit."
+                projectDescription={fatlandDescription}
                 contentLeft={false}
                 techList={fatlandTechList1}
-                githubLink="https://mittfatland.no/signin"
+                projectLink="https://mittfatland.no/signin"
                 internalLink={`/${COMMERCIAL_PRODUCTS}/${FATLAND_PROJECT}`}
-                externalLink="https://mittfatland.no/signin"
+                externalLink="https://www.fatland.no/newsread/index.aspx"
                 imagePath="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80"
             />
         </StyledSection>

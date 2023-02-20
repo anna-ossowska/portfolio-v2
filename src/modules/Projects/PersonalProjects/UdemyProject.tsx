@@ -5,7 +5,7 @@ import { PersonalProject } from './components';
 const UdemyProject = (): ReactElement => {
     return (
         <PersonalProject
-            projectTitle={<>Udemy</>}
+            projectTitle={<>Udemy Course</>}
             yearOfCreation="2021"
             projectLink={'https://www.udemy.com/course/use-powerpoint-like-a-professional-designer/'}
             projectDescription={udemyCourseDescription}

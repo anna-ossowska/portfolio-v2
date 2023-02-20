@@ -36,38 +36,33 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                         projectTitle="Foodly"
                         projectDescription="Foodly is a restaurant order taking app built in ReactJS. It application relies heavily on Redux Toolkit for the state management, as well as uses the Firebase real-time database."
                         techList={foodlyTechList1}
-                        projectDetailsPath="https://github.com/anna-ossowska"
-                        githubLink="https://github.com/anna-ossowska"
+                        githubLink="https://github.com/anna-ossowska/foodly-app"
                         internalLink={`/${PERSONAL_PROJECTS}/${FOODLY_PROJECT}`}
-                        externalLink="https://github.com/anna-ossowska"
+                        externalLink="https://foodly-app.netlify.app/"
                     />
 
                     <PersonalProjectCard
                         projectTitle="Outdoor"
                         projectDescription="Outdoor is an application designed for keeping track of workout location and training frequency. The project relies heavily on DOM manipulation and OOP paradigm."
                         techList={outdoorTechList1}
-                        projectDetailsPath="https://github.com/anna-ossowska"
-                        githubLink="https://github.com/anna-ossowska"
+                        githubLink="https://github.com/anna-ossowska/outdoor-app"
                         internalLink={`/${PERSONAL_PROJECTS}/${OUTDOOR_PROJECT}`}
-                        externalLink="https://github.com/anna-ossowska"
+                        externalLink="https://outdoor-application.netlify.app/"
                     />
 
                     <PersonalProjectCard
                         projectTitle="ScentShop"
                         projectDescription="ScentShop is a website designed for selling perfumes online. It was built mostly with C# and ASP.NET Core MVC 5."
                         techList={scentShopTechList1}
-                        projectDetailsPath="https://github.com/anna-ossowska"
-                        githubLink="https://github.com/anna-ossowska"
+                        githubLink="https://github.com/anna-ossowska/ScentShop/tree/master/ScentShop/ScentShop"
                         internalLink={`/${PERSONAL_PROJECTS}/${SCENTSHOP_PROJECT}`}
-                        externalLink="https://github.com/anna-ossowska"
+                        externalLink="https://scent-shop.azurewebsites.net/"
                     />
 
                     <PersonalProjectCard
                         projectTitle="Udemy Course"
                         projectDescription="I contributed to the global learning community by designing and publishing an online course on the Udemy platform about creating PowerPoint presentations and data visualizations. Currently, the course has more than 600 active students."
                         techList={udemyCourseTechList1}
-                        projectDetailsPath="https://github.com/anna-ossowska"
-                        githubLink="https://github.com/anna-ossowska"
                         internalLink={`/${PERSONAL_PROJECTS}/${UDEMY_PROJECT}`}
                         externalLink="https://www.udemy.com/course/use-powerpoint-like-a-professional-designer/"
                     />
@@ -76,10 +71,9 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                         projectTitle="Advision"
                         projectDescription="Advision is a website tailored for the consulting company. The project is utilizing the 7-1 pattern combined with BEM methodology."
                         techList={advisionTechList1}
-                        projectDetailsPath="https://github.com/anna-ossowska"
-                        githubLink="https://github.com/anna-ossowska"
+                        githubLink="https://github.com/anna-ossowska/advision-v2"
                         internalLink={`/${PERSONAL_PROJECTS}/${ADVISION_PROJECT}`}
-                        externalLink="https://github.com/anna-ossowska"
+                        externalLink="https://advision-company.netlify.app/"
                     />
                 </PersonalProjectsWrapper>
             </div>

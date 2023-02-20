@@ -69,15 +69,19 @@ const IconSubGroup = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     gap: 15px;
+    width: 23%;
+    z-index: 5;
 `;
+
+const ContentWrapper = styled.div``;
 
 interface PersonalProjectCardProps {
     projectTitle: string;
     projectDescription: string;
     techList: string[];
-    projectDetailsPath: string;
-    githubLink: string;
+    githubLink?: string;
     internalLink: string;
     externalLink: string;
 }
@@ -86,7 +90,6 @@ const PersonalProjectCard = ({
     projectTitle,
     projectDescription,
     techList,
-    projectDetailsPath,
     githubLink,
     internalLink,
     externalLink,
@@ -98,24 +101,30 @@ const PersonalProjectCard = ({
         navigate(`${internalLink}`, { replace: true });
         window.scrollTo(0, 0);
     };
+
     return (
-        <PersonalProjectContainer onClick={clickHandler}>
+        <PersonalProjectContainer>
             <div>
                 <IconGroup>
-                    <a href={projectDetailsPath} target="_blank" rel="noopener noreferrer">
+                    <a href={internalLink} target="_blank" rel="noopener noreferrer">
                         <IconFolder />
                     </a>
+
                     <IconSubGroup>
-                        <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                            <IconGithub />
-                        </a>
+                        {githubLink && (
+                            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                                <IconGithub />
+                            </a>
+                        )}
                         <a href={externalLink} target="_blank" rel="noopener noreferrer">
                             <IconExternalLink />
                         </a>
                     </IconSubGroup>
                 </IconGroup>
-                <h4>{projectTitle}</h4>
-                <p>{projectDescription}</p>
+                <ContentWrapper onClick={clickHandler}>
+                    <h4>{projectTitle}</h4>
+                    <p>{projectDescription}</p>
+                </ContentWrapper>
             </div>
             <TechnologyList techList={techList} />
         </PersonalProjectContainer>

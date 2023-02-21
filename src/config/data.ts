@@ -1,11 +1,10 @@
-import Solintegra11 from '../assets/images/projects/solintegra/1.png';
-import Solintegra22 from '../assets/images/projects/solintegra/solintegra-2-2.jpg';
-import Solintegra33 from '../assets/images/projects/solintegra/solintegra-3-3.jpg';
-import Solintegra43 from '../assets/images/projects/solintegra/solintegra-4-3.jpg';
-import Solintegra53 from '../assets/images/projects/solintegra/solintegra-5-3.jpg';
-import Solintegra63 from '../assets/images/projects/solintegra/solintegra-6-3.jpg';
-import Solintegra73 from '../assets/images/projects/solintegra/solintegra-7-3.jpg';
-import Solintegra83 from '../assets/images/projects/solintegra/solintegra-8-3.jpg';
+import Solintegra11 from '../assets/images/projects/solintegra/solintegra-1-1.png';
+import Solintegra22 from '../assets/images/projects/solintegra/solintegra-2-2.png';
+import Solintegra23 from '../assets/images/projects/solintegra/solintegra-2-3.png';
+import Solintegra34 from '../assets/images/projects/solintegra/solintegra-3-4.png';
+import Solintegra45 from '../assets/images/projects/solintegra/solintegra-4-5.png';
+import Solintegra46 from '../assets/images/projects/solintegra/solintegra-4-6.png';
+import Solintegra57 from '../assets/images/projects/solintegra/solintegra-5-7.png';
 
 // SKILLS
 
@@ -82,9 +81,11 @@ export const solintegraRespList = [
 ];
 
 export const solintegraUserStoriesList = [
-    'As admin, I want to see an overview of all inquiries in the system so that I can track their status and see if a customer needs attention',
-    'As admin, I want to be able to administrate individual inquiries to make sure changes are documented where everybody involved can be informed',
-    'As a partner I want to share details about a lead with a sub-contractor so that they can give me prices on their work contribution',
+    'As an Admin, I want to see an overview of all inquiries in the system so that I can track their status and see if a customer needs attention.',
+    'As an Admin, I want to be able to administrate individual inquiries to make sure changes are documented where everybody involved can be informed.',
+    'As a Partner I want an overview of all the actions I need to take in a lead so that I can follow a structured workflow that follows the Solintegra’s requirements.',
+    'As a Partner I need to enter the information that I gather on-site, web or on the phone with the customer in order to make an appropriate offer.',
+    'As a Partner I need help to figure out how many solar cell panels fit the roof and how much energy they would generate based on the information from the building because this is too complex to do manually.',
 ];
 
 export const solintegraDescription =
@@ -105,28 +106,24 @@ export const userStoriesImages: userStoriesImagesDto[] = [
         path: Solintegra22,
     },
     {
-        imageGroup: 3,
-        path: Solintegra33,
+        imageGroup: 2,
+        path: Solintegra23,
     },
     {
         imageGroup: 3,
-        path: Solintegra43,
+        path: Solintegra34,
     },
     {
-        imageGroup: 3,
-        path: Solintegra53,
+        imageGroup: 4,
+        path: Solintegra45,
     },
     {
-        imageGroup: 3,
-        path: Solintegra63,
+        imageGroup: 4,
+        path: Solintegra46,
     },
     {
-        imageGroup: 3,
-        path: Solintegra73,
-    },
-    {
-        imageGroup: 3,
-        path: Solintegra83,
+        imageGroup: 5,
+        path: Solintegra57,
     },
 ];
 

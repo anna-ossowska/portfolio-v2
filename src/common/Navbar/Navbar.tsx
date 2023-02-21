@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 import styled from 'styled-components';
 import Logo from '../../assets/images/logo.png';
 import { scrollToSection } from '../index';
@@ -15,7 +15,7 @@ const NavbarContainer = styled.nav`
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 4;
+    z-index: 20;
 `;
 
 const LogoWrapper = styled.div`
@@ -49,9 +49,20 @@ const NavbarItem = styled.li`
         margin-left: -5px;
         transition: color 0.2s;
     }
+
+    & a.active {
+        color: var(--color-secondary-highlight);
+    }
 `;
 
 const Navbar = (): ReactElement => {
+    const [activeSection, setActiveSection] = useState('');
+
+    const handleLinkClick = (sectionName: string) => {
+        scrollToSection(sectionName);
+        setActiveSection(sectionName);
+    };
+
     return (
         <NavbarContainer>
             <LogoWrapper>
@@ -59,20 +70,33 @@ const Navbar = (): ReactElement => {
             </LogoWrapper>
             <div>
                 <NavbarList>
-                    <NavbarItem onClick={() => scrollToSection('about')}>
-                        <a href="/#about">About</a>
+                    <NavbarItem onClick={() => handleLinkClick('about')}>
+                        <a href="/#about" className={activeSection === 'about' ? 'active' : ''}>
+                            About
+                        </a>
                     </NavbarItem>
-                    <NavbarItem onClick={() => scrollToSection('skills')}>
-                        <a href="/#skills">Skills</a>
+                    <NavbarItem onClick={() => handleLinkClick('skills')}>
+                        <a href="/#skills" className={activeSection === 'skills' ? 'active' : ''}>
+                            Skills
+                        </a>
                     </NavbarItem>
-                    <NavbarItem onClick={() => scrollToSection('commercial-products')}>
-                        <a href="/#commercial-products">Commercial products</a>
+                    <NavbarItem onClick={() => handleLinkClick('commercial-products')}>
+                        <a
+                            href="/#commercial-products"
+                            className={activeSection === 'commercial-products' ? 'active' : ''}
+                        >
+                            Commercial products
+                        </a>
                     </NavbarItem>
-                    <NavbarItem onClick={() => scrollToSection('personal-projects')}>
-                        <a href="/#personal-projects">Personal projects</a>
+                    <NavbarItem onClick={() => handleLinkClick('personal-projects')}>
+                        <a href="/#personal-projects" className={activeSection === 'personal-projects' ? 'active' : ''}>
+                            Personal projects
+                        </a>
                     </NavbarItem>
-                    <NavbarItem onClick={() => scrollToSection('contact')}>
-                        <a href="/#contact">Contact</a>
+                    <NavbarItem onClick={() => handleLinkClick('contact')}>
+                        <a href="/#contact" className={activeSection === 'contact' ? 'active' : ''}>
+                            Contact
+                        </a>
                     </NavbarItem>
                 </NavbarList>
                 <Sidebar />

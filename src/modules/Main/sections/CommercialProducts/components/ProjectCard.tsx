@@ -42,8 +42,8 @@ const ProjectImageWrapper = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
+        /* -webkit-filter: grayscale(100%);
+        filter: grayscale(100%); */
         cursor: pointer;
         transition: var(--custom-transition);
 

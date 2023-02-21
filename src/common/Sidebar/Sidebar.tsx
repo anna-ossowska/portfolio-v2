@@ -18,7 +18,7 @@ const NavigationButton = styled.div`
     justify-content: center;
     height: 100%;
     width: 100%;
-    z-index: 1000;
+    z-index: 30;
     cursor: pointer;
     position: relative;
 `;
@@ -109,6 +109,10 @@ const NavigationItem = styled.li`
         margin-left: -5px;
         transition: color 0.2s;
     }
+
+    & a.active {
+        color: var(--color-secondary-highlight);
+    }
 `;
 
 interface BlurredBackgroundProps {
@@ -133,6 +137,12 @@ const BlurredBackground = styled.div`
 
 const Sidebar = (): ReactElement => {
     const [isOpen, setIsOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState('');
+
+    const handleLinkClick = (sectionName: string) => {
+        setIsOpen(false);
+        setActiveSection(sectionName);
+    };
 
     const handleButtonClick = () => {
         setIsOpen(!isOpen);
@@ -140,11 +150,6 @@ const Sidebar = (): ReactElement => {
 
     const handleBackgroundClick = () => {
         setIsOpen(!isOpen);
-    };
-
-    const handleLinkClick = () => {
-        console.log(isOpen);
-        setIsOpen(false);
     };
 
     return (
@@ -157,26 +162,34 @@ const Sidebar = (): ReactElement => {
                     <NavigationContainer>
                         <nav>
                             <NavigationList>
-                                <NavigationItem onClick={handleLinkClick}>
-                                    <a href="/#about">About</a>
+                                <NavigationItem onClick={() => handleLinkClick('about')}>
+                                    <a href="/#about" className={activeSection === 'about' ? 'active' : ''}>
+                                        About
+                                    </a>
                                 </NavigationItem>
-                                <NavigationItem>
-                                    <a href="/#skills" onClick={handleLinkClick}>
+                                <NavigationItem onClick={() => handleLinkClick('skills')}>
+                                    <a href="/#skills" className={activeSection === 'skills' ? 'active' : ''}>
                                         Skills
                                     </a>
                                 </NavigationItem>
-                                <NavigationItem>
-                                    <a href="/#commercial-products" onClick={handleLinkClick}>
+                                <NavigationItem onClick={() => handleLinkClick('commercial-products')}>
+                                    <a
+                                        href="/#commercial-products"
+                                        className={activeSection === 'commercial-products' ? 'active' : ''}
+                                    >
                                         Commercial products
                                     </a>
                                 </NavigationItem>
-                                <NavigationItem>
-                                    <a href="/#personal-projects" onClick={handleLinkClick}>
+                                <NavigationItem onClick={() => handleLinkClick('personal-projects')}>
+                                    <a
+                                        href="/#personal-projects"
+                                        className={activeSection === 'personal-projects' ? 'active' : ''}
+                                    >
                                         Personal projects
                                     </a>
                                 </NavigationItem>
-                                <NavigationItem>
-                                    <a href="/#contact" onClick={handleLinkClick}>
+                                <NavigationItem onClick={() => handleLinkClick('contact')}>
+                                    <a href="/#contact" className={activeSection === 'contact' ? 'active' : ''}>
                                         Contact
                                     </a>
                                 </NavigationItem>

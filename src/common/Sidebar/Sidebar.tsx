@@ -142,6 +142,11 @@ const Sidebar = (): ReactElement => {
         setIsOpen(!isOpen);
     };
 
+    const handleLinkClick = () => {
+        console.log(isOpen);
+        setIsOpen(false);
+    };
+
     return (
         <div>
             <Navigation>
@@ -152,20 +157,28 @@ const Sidebar = (): ReactElement => {
                     <NavigationContainer>
                         <nav>
                             <NavigationList>
-                                <NavigationItem>
+                                <NavigationItem onClick={handleLinkClick}>
                                     <a href="/#about">About</a>
                                 </NavigationItem>
                                 <NavigationItem>
-                                    <a href="/#skills">Skills</a>
+                                    <a href="/#skills" onClick={handleLinkClick}>
+                                        Skills
+                                    </a>
                                 </NavigationItem>
                                 <NavigationItem>
-                                    <a href="/#commercial-products">Commercial products</a>
+                                    <a href="/#commercial-products" onClick={handleLinkClick}>
+                                        Commercial products
+                                    </a>
                                 </NavigationItem>
                                 <NavigationItem>
-                                    <a href="/#coding-projects">Coding projects</a>
+                                    <a href="/#personal-projects" onClick={handleLinkClick}>
+                                        Personal projects
+                                    </a>
                                 </NavigationItem>
                                 <NavigationItem>
-                                    <a href="/#contact">Contact</a>
+                                    <a href="/#contact" onClick={handleLinkClick}>
+                                        Contact
+                                    </a>
                                 </NavigationItem>
                             </NavigationList>
                         </nav>

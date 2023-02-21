@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
-import { RegularHeader, ProjectContainer } from '../../../../common/index';
+import { RegularHeader, ProjectContainer, BackButton } from '../../../../common/index';
 
 const ProjectTitleWrapper = styled.h2`
     & h2 {
@@ -44,6 +44,7 @@ const ProjectMainInfoWrapper = styled.div`
 
     @media only screen and (max-width: 600px) {
         gap: 15px;
+        font-size: 15px;
     }
 `;
 
@@ -71,6 +72,10 @@ const StyledList = styled.ul`
             @media only screen and (max-width: 600px) {
                 top: -4px;
             }
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 13px;
         }
     }
 `;
@@ -100,6 +105,7 @@ const PersonalProject = ({
 }: PersonalProjectProps): ReactElement => {
     return (
         <ProjectContainer>
+            <BackButton />
             <ProjectIntro>
                 <ProjectTitleWrapper>
                     <h2>{projectTitle}</h2>

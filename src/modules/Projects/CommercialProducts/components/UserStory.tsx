@@ -10,6 +10,10 @@ const UserStoryWrapper = styled.div`
 
     & p {
         color: var(--color-text-light-1);
+
+        @media only screen and (max-width: 600px) {
+            font-size: 15px;
+        }
     }
 
     & img {

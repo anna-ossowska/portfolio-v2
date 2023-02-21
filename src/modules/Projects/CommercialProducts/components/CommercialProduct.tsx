@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 import styled from 'styled-components';
-import { NumberedHeader, ProjectContainer } from '../../../../common/index';
+import { BackButton, NumberedHeader, ProjectContainer } from '../../../../common/index';
 import { userStoriesImagesDto } from '../../../../config/data';
 import { UserStory } from './index';
 
@@ -42,6 +42,7 @@ const ProjectMainInfoWrapper = styled.div`
 
     @media only screen and (max-width: 600px) {
         gap: 15px;
+        font-size: 15px;
     }
 `;
 
@@ -69,6 +70,10 @@ const StyledList = styled.ul`
             @media only screen and (max-width: 600px) {
                 top: -4px;
             }
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: 13px;
         }
     }
 `;
@@ -119,6 +124,7 @@ const CommercialProduct = ({
 }: CommercialProductProps): ReactElement => {
     return (
         <ProjectContainer>
+            <BackButton />
             <ProjectIntro>
                 <ProjectTitleWrapper>
                     <h2>{projectTitle}</h2>

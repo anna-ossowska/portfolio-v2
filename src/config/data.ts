@@ -1,4 +1,4 @@
-import Solintegra11 from '../assets/images/projects/solintegra/solintegra-1-1.jpg';
+import Solintegra11 from '../assets/images/projects/solintegra/1.png';
 import Solintegra22 from '../assets/images/projects/solintegra/solintegra-2-2.jpg';
 import Solintegra33 from '../assets/images/projects/solintegra/solintegra-3-3.jpg';
 import Solintegra43 from '../assets/images/projects/solintegra/solintegra-4-3.jpg';
@@ -18,7 +18,7 @@ export const frontEndSkills = [
     'CSS',
     'Redux & Redux Toolkit',
     'HTML5',
-    'Material UI',
+    'Material UI (MUI)',
     'Responsive Web Design',
     'Sass',
     'Web Accessibility',
@@ -55,7 +55,7 @@ export const solintegraIndustryList = ['Renewable Energy', 'Construction'];
 
 export const solintegraRolesList = ['Lead Front-end Developer', 'Consultant'];
 
-export const solintegraTechList1 = ['AWS Aplify', 'React', 'TypeScript', 'Redux Toolkit', 'Material UI'];
+export const solintegraTechList1 = ['AWS Aplify', 'React', 'TypeScript', 'Redux Toolkit', 'MUI'];
 
 export const solintegraTechList2 = [
     'AWS Amplify',

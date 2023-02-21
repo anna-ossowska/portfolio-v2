@@ -72,7 +72,7 @@ const IconSubGroup = styled.div`
     justify-content: flex-end;
     gap: 15px;
     width: 23%;
-    z-index: 5;
+    z-index: 1;
 `;
 
 const ContentWrapper = styled.div``;
@@ -103,31 +103,31 @@ const PersonalProjectCard = ({
     };
 
     return (
-        <PersonalProjectContainer>
-            <div>
-                <IconGroup>
-                    <a href={internalLink} target="_blank" rel="noopener noreferrer">
+        <a href={internalLink} target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
+            <PersonalProjectContainer>
+                <div>
+                    <IconGroup>
                         <IconFolder />
-                    </a>
 
-                    <IconSubGroup>
-                        {githubLink && (
-                            <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                                <IconGithub />
+                        <IconSubGroup>
+                            {githubLink && (
+                                <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                                    <IconGithub />
+                                </a>
+                            )}
+                            <a href={externalLink} target="_blank" rel="noopener noreferrer">
+                                <IconExternalLink />
                             </a>
-                        )}
-                        <a href={externalLink} target="_blank" rel="noopener noreferrer">
-                            <IconExternalLink />
-                        </a>
-                    </IconSubGroup>
-                </IconGroup>
-                <ContentWrapper onClick={clickHandler}>
-                    <h4>{projectTitle}</h4>
-                    <p>{projectDescription}</p>
-                </ContentWrapper>
-            </div>
-            <TechnologyList techList={techList} />
-        </PersonalProjectContainer>
+                        </IconSubGroup>
+                    </IconGroup>
+                    <ContentWrapper onClick={clickHandler}>
+                        <h4>{projectTitle}</h4>
+                        <p>{projectDescription}</p>
+                    </ContentWrapper>
+                </div>
+                <TechnologyList techList={techList} />
+            </PersonalProjectContainer>
+        </a>
     );
 };
 

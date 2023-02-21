@@ -35,7 +35,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
         <MainContainer>
             <ScrollAdjustment elementId="personal-projects" />
             <StyledSection>
-                <NumberedHeader headerNumber="04" title="Coding Projects" />
+                <NumberedHeader headerNumber="04" title="Personal Projects" />
                 <div>
                     <PersonalProjectsWrapper>
                         <PersonalProjectCard

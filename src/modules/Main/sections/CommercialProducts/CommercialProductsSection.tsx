@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import SolinegraImg from '../../../../assets/images/projects/solintegra/solintegra-main.jpg';
+import SolinegraImg from '../../../../assets/images/projects/solintegra/solintegra-4-5.jpg';
 import { NumberedHeader, ScrollAdjustment } from '../../../../common/index';
 import {
     fatlandDescription,

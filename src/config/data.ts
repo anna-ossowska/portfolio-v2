@@ -1,10 +1,10 @@
-import Solintegra11 from '../assets/images/projects/solintegra/solintegra-1-1.png';
-import Solintegra22 from '../assets/images/projects/solintegra/solintegra-2-2.png';
-import Solintegra23 from '../assets/images/projects/solintegra/solintegra-2-3.png';
-import Solintegra34 from '../assets/images/projects/solintegra/solintegra-3-4.png';
-import Solintegra45 from '../assets/images/projects/solintegra/solintegra-4-5.png';
-import Solintegra46 from '../assets/images/projects/solintegra/solintegra-4-6.png';
-import Solintegra57 from '../assets/images/projects/solintegra/solintegra-5-7.png';
+import Solintegra11 from '../assets/images/projects/solintegra/solintegra-1-1.jpg';
+import Solintegra22 from '../assets/images/projects/solintegra/solintegra-2-2.jpg';
+import Solintegra23 from '../assets/images/projects/solintegra/solintegra-2-3.jpg';
+import Solintegra34 from '../assets/images/projects/solintegra/solintegra-3-4.jpg';
+import Solintegra45 from '../assets/images/projects/solintegra/solintegra-4-5.jpg';
+import Solintegra46 from '../assets/images/projects/solintegra/solintegra-4-6.jpg';
+import Solintegra57 from '../assets/images/projects/solintegra/solintegra-5-7.jpg';
 
 // SKILLS
 

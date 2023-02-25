@@ -28,6 +28,8 @@ const SolintegraProject = (): ReactElement => {
                 respList={solintegraRespList}
                 userStoriesList={solintegraUserStoriesList}
                 userStoriesImages={userStoriesImages}
+                projectLink={'https://partner.solintegra.no'}
+                externalLink={'https://www.solintegra.no/'}
             />
         </div>
     );

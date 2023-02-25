@@ -34,6 +34,10 @@ const ProjectMainInfoWrapper = styled.div`
     color: var(--color-text-light-2);
     font-size: 18px;
 
+    & a {
+        color: var(--color-text-light-2);
+    }
+
     & span.span-decorator {
         font-family: var(--font-family-secondary);
         color: var(--color-text-highlight);
@@ -110,6 +114,8 @@ interface CommercialProductProps {
     respList: string[];
     userStoriesList?: string[];
     userStoriesImages?: userStoriesImagesDto[];
+    projectLink: string;
+    externalLink: string;
 }
 
 const CommercialProduct = ({
@@ -121,6 +127,8 @@ const CommercialProduct = ({
     respList,
     userStoriesList,
     userStoriesImages,
+    projectLink,
+    externalLink,
 }: CommercialProductProps): ReactElement => {
     return (
         <ProjectContainer>
@@ -141,6 +149,20 @@ const CommercialProduct = ({
                         {rolesList.map((el, index, arr) => {
                             return <span key={`rolesList-${index}`}>{index < arr.length - 1 ? el + ', ' : el}</span>;
                         })}
+                    </div>
+
+                    <div>
+                        <span className="span-decorator">Project link:</span>
+                        <a href={projectLink} target="_blank" rel="noopener noreferrer">
+                            {projectLink}
+                        </a>
+                    </div>
+
+                    <div>
+                        <span className="span-decorator">Company link:</span>
+                        <a href={externalLink} target="_blank" rel="noopener noreferrer">
+                            {externalLink}
+                        </a>
                     </div>
                 </ProjectMainInfoWrapper>
                 <div>{projectDescription}</div>

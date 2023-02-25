@@ -18,6 +18,8 @@ const FatlandProject = (): ReactElement => {
                 projectDescription={fatlandDescription}
                 techList={fatlandTechList2}
                 respList={fatlandRespList}
+                projectLink={'https://mittfatland.no/'}
+                externalLink={'https://www.fatland.no/newsread/index.aspx'}
             />
         </div>
     );

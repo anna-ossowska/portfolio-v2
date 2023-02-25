@@ -18,6 +18,8 @@ const LifeAtWorkProject = (): ReactElement => {
                 projectDescription={lifeAtWorkDescription}
                 techList={lifeAtWorkTechList2}
                 respList={lifeAtWorkRespList}
+                projectLink={'https://www.lifeatwork.as/'}
+                externalLink={'https://veni.no/lifeatwork/'}
             />
         </div>
     );

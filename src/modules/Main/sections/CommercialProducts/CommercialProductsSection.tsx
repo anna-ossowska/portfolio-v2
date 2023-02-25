@@ -55,7 +55,7 @@ const CommercialProductsSection = (): ReactElement => {
                     projectDescription={fatlandDescription}
                     contentLeft={false}
                     techList={fatlandTechList1}
-                    projectLink="https://mittfatland.no/signin"
+                    projectLink="https://mittfatland.no/"
                     internalLink={`/${PROJECTS}/${FATLAND_PROJECT}`}
                     externalLink="https://www.fatland.no/newsread/index.aspx"
                     imagePath={FatlandImg}

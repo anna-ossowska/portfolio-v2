@@ -103,31 +103,29 @@ const PersonalProjectCard = ({
     };
 
     return (
-        <a href={internalLink} target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>
-            <PersonalProjectContainer>
-                <div>
-                    <IconGroup>
-                        <IconFolder />
+        <PersonalProjectContainer onClick={clickHandler}>
+            <div>
+                <IconGroup>
+                    <IconFolder />
 
-                        <IconSubGroup>
-                            {githubLink && (
-                                <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                                    <IconGithub />
-                                </a>
-                            )}
-                            <a href={externalLink} target="_blank" rel="noopener noreferrer">
-                                <IconExternalLink />
+                    <IconSubGroup>
+                        {githubLink && (
+                            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+                                <IconGithub />
                             </a>
-                        </IconSubGroup>
-                    </IconGroup>
-                    <ContentWrapper onClick={clickHandler}>
-                        <h4>{projectTitle}</h4>
-                        <p>{projectDescription}</p>
-                    </ContentWrapper>
-                </div>
-                <TechnologyList techList={techList} />
-            </PersonalProjectContainer>
-        </a>
+                        )}
+                        <a href={externalLink} target="_blank" rel="noopener noreferrer">
+                            <IconExternalLink />
+                        </a>
+                    </IconSubGroup>
+                </IconGroup>
+                <ContentWrapper onClick={clickHandler}>
+                    <h4>{projectTitle}</h4>
+                    <p>{projectDescription}</p>
+                </ContentWrapper>
+            </div>
+            <TechnologyList techList={techList} />
+        </PersonalProjectContainer>
     );
 };
 

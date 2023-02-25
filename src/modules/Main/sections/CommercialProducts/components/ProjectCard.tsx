@@ -40,42 +40,11 @@ const ProjectImageWrapper = styled.div`
     & div {
         background-image: ${({ imagePath }: ProjectImageWrapperProps) => (imagePath ? `url(${imagePath})` : '')};
         background-repeat: no-repeat;
-        /* make this value custom */
-        background-size: 90%;
+        background-size: 100%;
         height: 100%;
         width: 100%;
         background-position: center;
-        background-color: white;
     }
-    /* 
-    & img {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        cursor: pointer;
-        transition: var(--custom-transition);
-
-        &:hover {
-            filter: none;
-        }
-    }
-
-    @media only screen and (max-width: 992px) {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -2;
-
-        & img {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
-        }
-    } */
 `;
 
 interface ProjectContentWrapperProps {
@@ -95,6 +64,23 @@ const ProjectContentWrapper = styled.div`
     @media only screen and (max-width: 992px) {
         align-items: flex-start;
         padding: 20px;
+    }
+`;
+
+const ProjectRole = styled.h5`
+    color: var(--color-text-highlight);
+    font-family: var(--font-family-secondary);
+    font-size: 16px;
+    font-weight: var(--font-weight-ligh);
+    text-align: right;
+    margin-bottom: 10px;
+
+    @media only screen and (max-width: 992px) {
+        text-align: left;
+    }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 14px;
     }
 `;
 
@@ -183,6 +169,7 @@ interface ProjectCardProps {
     internalLink: string;
     externalLink: string;
     imagePath: string;
+    projectRole: string;
 }
 
 const ProjectCard = ({
@@ -194,10 +181,12 @@ const ProjectCard = ({
     internalLink,
     externalLink,
     imagePath,
+    projectRole,
 }: ProjectCardProps): ReactElement => {
     return (
         <ProjectContainer>
             <ProjectContentWrapper contentLeft={contentLeft}>
+                <ProjectRole>{projectRole}</ProjectRole>
                 <ProjectTitle>{projectTitle}</ProjectTitle>
                 <ProjectDescription contentLeft={contentLeft}>{projectDescription}</ProjectDescription>
                 <TechnologyList techList={techList} />
@@ -216,7 +205,6 @@ const ProjectCard = ({
                 </ButtonContainer>
             </ProjectContentWrapper>
             <ProjectImageWrapper contentLeft={contentLeft} imagePath={imagePath}>
-                {/* <img src={imagePath} alt="profile" /> */}
                 <div />
             </ProjectImageWrapper>
         </ProjectContainer>

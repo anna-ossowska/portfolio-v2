@@ -35,6 +35,7 @@ const CommercialProductsSection = (): ReactElement => {
                     internalLink={`/${PROJECTS}/${SOLINTEGRA_PROJECT}`}
                     externalLink="https://www.solintegra.no/"
                     imagePath={SolinegraImg}
+                    projectRole={'Lead Front-end Developer, Tech Lead, Consultant'}
                 />
 
                 <ProjectCard
@@ -46,6 +47,7 @@ const CommercialProductsSection = (): ReactElement => {
                     internalLink={`/${PROJECTS}/${LIFE_AT_WORK_PROJECT}`}
                     externalLink="https://veni.no/lifeatwork/"
                     imagePath={LifeAtWorkImg}
+                    projectRole={'Front-end Developer'}
                 />
 
                 <ProjectCard
@@ -57,6 +59,7 @@ const CommercialProductsSection = (): ReactElement => {
                     internalLink={`/${PROJECTS}/${FATLAND_PROJECT}`}
                     externalLink="https://www.fatland.no/newsread/index.aspx"
                     imagePath={FatlandImg}
+                    projectRole={'Front-end Developer, Consultant'}
                 />
             </StyledSection>
         </MainContainer>

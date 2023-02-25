@@ -1,2 +1,2 @@
 export { default as PersonalProjects } from './PersonalProjects/PersonalProjects';
-export { default as CommercialProducts } from './CommercialProducts/CommercialProducts';
+export { default as Projects } from './Projects';

@@ -52,7 +52,7 @@ export const libraries = [
 
 export const solintegraIndustryList = ['Renewable Energy', 'Construction'];
 
-export const solintegraRolesList = ['Lead Front-end Developer', 'Consultant'];
+export const solintegraRolesList = ['Lead Front-end Developer', 'Tech Lead', 'Consultant'];
 
 export const solintegraTechList1 = ['AWS Aplify', 'React', 'TypeScript', 'Redux Toolkit', 'MUI'];
 

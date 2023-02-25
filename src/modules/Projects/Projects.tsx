@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import { Outlet } from 'react-router-dom';
 
-const CommercialProducts = (): ReactElement => {
+const Projects = (): ReactElement => {
     return (
         <div>
             <Outlet />
@@ -9,4 +9,4 @@ const CommercialProducts = (): ReactElement => {
     );
 };
 
-export default CommercialProducts;
+export default Projects;

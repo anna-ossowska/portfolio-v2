@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from '../App';
 import { FatlandProject, LifeAtWorkProject, SolintegraProject } from '../modules/Projects/CommercialProducts/index';
-import { PersonalProjects, CommercialProducts } from '../modules/Projects/index';
+import { Projects } from '../modules/Projects/index';
 import {
     AdvisionProject,
     FoodlyProject,
@@ -28,9 +28,7 @@ const RouterConfig = (): ReactElement => {
         <BrowserRouter>
             <Routes>
                 <Route path={ROOT} element={<App />}>
-                    <Route path={PROJECTS} element={<PersonalProjects />}></Route>
-                    {/* TODO Redirect to Main if there is no third segment */}
-                    <Route path={PROJECTS} element={<CommercialProducts />}>
+                    <Route path={PROJECTS} element={<Projects />}>
                         <Route path={SOLINTEGRA_PROJECT} element={<SolintegraProject />} />
                         <Route path={FATLAND_PROJECT} element={<FatlandProject />} />
                         <Route path={LIFE_AT_WORK_PROJECT} element={<LifeAtWorkProject />} />

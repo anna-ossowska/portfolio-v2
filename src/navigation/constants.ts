@@ -6,6 +6,7 @@ export const FATLAND_PROJECT = 'fatland';
 export const LIFE_AT_WORK_PROJECT = 'life-at-work';
 export const UDEMY_PROJECT = 'udemy-project';
 
+export const PROJECTS = 'projects';
 export const PERSONAL_PROJECTS = 'personal-projects';
 export const FOODLY_PROJECT = 'foodly';
 export const SCENTSHOP_PROJECT = 'scentshop';

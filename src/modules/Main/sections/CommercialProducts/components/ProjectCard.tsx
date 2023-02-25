@@ -7,7 +7,7 @@ import { TechnologyList } from './index';
 const ProjectContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    min-height: 420px;
+    min-height: 400px;
     margin-bottom: 100px;
 
     @media only screen and (max-width: 992px) {
@@ -28,6 +28,7 @@ const ProjectContainer = styled.div`
 
 interface ProjectImageWrapperProps {
     contentLeft: boolean;
+    imagePath: string;
 }
 
 const ProjectImageWrapper = styled.div`
@@ -36,14 +37,23 @@ const ProjectImageWrapper = styled.div`
     position: relative;
     grid-area: ${({ contentLeft }: ProjectImageWrapperProps) => (contentLeft ? '1 / 7 / 1 / 13' : '1 / 1 / 1 / 7')};
 
+    & div {
+        background-image: ${({ imagePath }: ProjectImageWrapperProps) => (imagePath ? `url(${imagePath})` : '')};
+        background-repeat: no-repeat;
+        /* make this value custom */
+        background-size: 90%;
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-color: white;
+    }
+    /* 
     & img {
         position: absolute;
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* -webkit-filter: grayscale(100%);
-        filter: grayscale(100%); */
         cursor: pointer;
         transition: var(--custom-transition);
 
@@ -65,7 +75,7 @@ const ProjectImageWrapper = styled.div`
             width: 100%;
             z-index: -1;
         }
-    }
+    } */
 `;
 
 interface ProjectContentWrapperProps {
@@ -205,8 +215,9 @@ const ProjectCard = ({
                     <Button message="Learn More" large={false} path={internalLink} />
                 </ButtonContainer>
             </ProjectContentWrapper>
-            <ProjectImageWrapper contentLeft={contentLeft}>
-                <img src={imagePath} alt="profile" />
+            <ProjectImageWrapper contentLeft={contentLeft} imagePath={imagePath}>
+                {/* <img src={imagePath} alt="profile" /> */}
+                <div />
             </ProjectImageWrapper>
         </ProjectContainer>
     );

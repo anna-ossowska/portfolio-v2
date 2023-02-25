@@ -1,6 +1,8 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import SolinegraImg from '../../../../assets/images/projects/solintegra/solintegra-4-5.jpg';
+import FatlandImg from '../../../../assets/images/projects/fatland/fatland-main.jpg';
+import LifeAtWorkImg from '../../../../assets/images/projects/lifeatwork/lifeatwork-main.jpg';
+import SolinegraImg from '../../../../assets/images/projects/solintegra/solintegra-main.jpg';
 import { NumberedHeader, ScrollAdjustment } from '../../../../common/index';
 import {
     fatlandDescription,
@@ -10,12 +12,7 @@ import {
     solintegraDescription,
     solintegraTechList1,
 } from '../../../../config/data';
-import {
-    COMMERCIAL_PRODUCTS,
-    FATLAND_PROJECT,
-    LIFE_AT_WORK_PROJECT,
-    SOLINTEGRA_PROJECT,
-} from '../../../../navigation/constants';
+import { PROJECTS, FATLAND_PROJECT, LIFE_AT_WORK_PROJECT, SOLINTEGRA_PROJECT } from '../../../../navigation/constants';
 import { StyledSection } from '../../components/index';
 import { ProjectCard } from './components/index';
 
@@ -35,7 +32,7 @@ const CommercialProductsSection = (): ReactElement => {
                     contentLeft={false}
                     techList={solintegraTechList1}
                     projectLink="https://partner.solintegra.no"
-                    internalLink={`/${COMMERCIAL_PRODUCTS}/${SOLINTEGRA_PROJECT}`}
+                    internalLink={`/${PROJECTS}/${SOLINTEGRA_PROJECT}`}
                     externalLink="https://www.solintegra.no/"
                     imagePath={SolinegraImg}
                 />
@@ -46,9 +43,9 @@ const CommercialProductsSection = (): ReactElement => {
                     contentLeft={true}
                     techList={lifeAtWorkTechList1}
                     projectLink="https://www.lifeatwork.as/"
-                    internalLink={`/${COMMERCIAL_PRODUCTS}/${LIFE_AT_WORK_PROJECT}`}
+                    internalLink={`/${PROJECTS}/${LIFE_AT_WORK_PROJECT}`}
                     externalLink="https://veni.no/lifeatwork/"
-                    imagePath="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80"
+                    imagePath={LifeAtWorkImg}
                 />
 
                 <ProjectCard
@@ -57,9 +54,9 @@ const CommercialProductsSection = (): ReactElement => {
                     contentLeft={false}
                     techList={fatlandTechList1}
                     projectLink="https://mittfatland.no/signin"
-                    internalLink={`/${COMMERCIAL_PRODUCTS}/${FATLAND_PROJECT}`}
+                    internalLink={`/${PROJECTS}/${FATLAND_PROJECT}`}
                     externalLink="https://www.fatland.no/newsread/index.aspx"
-                    imagePath="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2459&q=80"
+                    imagePath={FatlandImg}
                 />
             </StyledSection>
         </MainContainer>

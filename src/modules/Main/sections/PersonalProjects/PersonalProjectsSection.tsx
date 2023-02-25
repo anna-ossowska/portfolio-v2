@@ -12,7 +12,7 @@ import {
     ADVISION_PROJECT,
     FOODLY_PROJECT,
     OUTDOOR_PROJECT,
-    PERSONAL_PROJECTS,
+    PROJECTS,
     SCENTSHOP_PROJECT,
     UDEMY_PROJECT,
 } from '../../../../navigation/constants';
@@ -43,7 +43,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                             projectDescription="Foodly is a restaurant order taking app built in ReactJS. It application relies heavily on Redux Toolkit for the state management, as well as uses the Firebase real-time database."
                             techList={foodlyTechList1}
                             githubLink="https://github.com/anna-ossowska/foodly-app"
-                            internalLink={`/${PERSONAL_PROJECTS}/${FOODLY_PROJECT}`}
+                            internalLink={`/${PROJECTS}/${FOODLY_PROJECT}`}
                             externalLink="https://foodly-app.netlify.app/"
                         />
 
@@ -52,7 +52,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                             projectDescription="Outdoor is an application designed for keeping track of workout location and training frequency. The project relies heavily on DOM manipulation and OOP paradigm."
                             techList={outdoorTechList1}
                             githubLink="https://github.com/anna-ossowska/outdoor-app"
-                            internalLink={`/${PERSONAL_PROJECTS}/${OUTDOOR_PROJECT}`}
+                            internalLink={`/${PROJECTS}/${OUTDOOR_PROJECT}`}
                             externalLink="https://outdoor-application.netlify.app/"
                         />
 
@@ -61,7 +61,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                             projectDescription="ScentShop is a website designed for selling perfumes online. It was built mostly with C# and ASP.NET Core MVC 5."
                             techList={scentShopTechList1}
                             githubLink="https://github.com/anna-ossowska/ScentShop/tree/master/ScentShop/ScentShop"
-                            internalLink={`/${PERSONAL_PROJECTS}/${SCENTSHOP_PROJECT}`}
+                            internalLink={`/${PROJECTS}/${SCENTSHOP_PROJECT}`}
                             externalLink="https://scent-shop.azurewebsites.net/"
                         />
 
@@ -69,7 +69,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                             projectTitle="Udemy Course"
                             projectDescription="I contributed to the global learning community by designing and publishing an online course on the Udemy platform about creating PowerPoint presentations and data visualizations. Currently, the course has more than 600 active students."
                             techList={udemyCourseTechList1}
-                            internalLink={`/${PERSONAL_PROJECTS}/${UDEMY_PROJECT}`}
+                            internalLink={`/${PROJECTS}/${UDEMY_PROJECT}`}
                             externalLink="https://www.udemy.com/course/use-powerpoint-like-a-professional-designer/"
                         />
 
@@ -78,7 +78,7 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                             projectDescription="Advision is a website tailored for the consulting company. The project is utilizing the 7-1 pattern combined with BEM methodology."
                             techList={advisionTechList1}
                             githubLink="https://github.com/anna-ossowska/advision-v2"
-                            internalLink={`/${PERSONAL_PROJECTS}/${ADVISION_PROJECT}`}
+                            internalLink={`/${PROJECTS}/${ADVISION_PROJECT}`}
                             externalLink="https://advision-company.netlify.app/"
                         />
                     </PersonalProjectsWrapper>

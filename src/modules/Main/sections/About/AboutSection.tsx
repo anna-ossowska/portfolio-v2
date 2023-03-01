@@ -56,19 +56,30 @@ const AboutSection = (): ReactElement => {
                 <AboutSectionContainer>
                     <div>
                         <StyledParagraph>
-                            I am currently working as a Front-end Developer and Consultant at Veni AS, a cutting-edge technology and innovation firm located in the beautiful city of Stavanger, Norway.
+                            I am currently working as a Front-end Developer and Consultant at Veni AS, a cutting-edge
+                            technology and innovation firm located in the beautiful city of Stavanger, Norway.
                         </StyledParagraph>
 
                         <StyledParagraph>
-                            At Veni, I have the opportunity to leverage my passion for web development to create intuitive and responsive applications for clients in diverse industries such as renewable energy, building, retail, and food production. I take pride in collaborating with cross-functional teams using Scrum methodology to ensure successful project delivery.
+                            At Veni, I have the opportunity to leverage my passion for web development to create
+                            intuitive and responsive applications for clients in diverse industries such as renewable
+                            energy, building, retail, and food production. I take pride in collaborating with
+                            cross-functional teams using Scrum methodology to ensure successful project delivery.
                         </StyledParagraph>
-                        
+
                         <StyledParagraph>
-                            Before joining Veni, my interest in programming and web development grew while working as a Graphic Designer at Bain & Company. In 2020, I relocated to Norway and pursued a Full-stack Web Development Program at Le Wagon Coding School in Oslo. Since then, I have been dedicated to expanding my programming and design skills by working on various coding projects and completing multiple online courses.
+                            Before joining Veni, my interest in programming and web development grew while working as a
+                            Graphic Designer at Bain & Company. In 2020, I relocated to Norway and pursued a Full-stack
+                            Web Development Program at Le Wagon Coding School in Oslo. Since then, I have been dedicated
+                            to expanding my programming and design skills by working on various coding projects and
+                            completing multiple online courses.
                         </StyledParagraph>
-                        
+
                         <StyledParagraph>
-                            To further my knowledge, I obtained certifications in a range of programming topics, including React, TypeScript, JavaScript, CSS, Sass, Figma prototyping, responsive design, and C#. You can check out my coding journey in the ‘Projects’ section, as well as on my GitHub profile.
+                            To further my knowledge, I obtained certifications in a range of programming topics,
+                            including React, TypeScript, JavaScript, CSS, Sass, Figma prototyping, responsive design,
+                            and C#. You can check out my coding journey in the ‘Projects’ section, as well as on my
+                            GitHub profile.
                         </StyledParagraph>
                     </div>
                     <ImageContainer>

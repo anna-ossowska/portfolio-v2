@@ -214,7 +214,7 @@ export const foodlyTechList2 = [
     'Adobe Creative Cloud',
 ];
 export const foodlyDescription =
-    'Foodly is a restaurant order taking app built in ReactJS. The potential user of the website can search through available meals, add/remove meals to/from the shopping cart, fill the order form and complete the order. The application relies heavily on Redux Toolkit for the state management, as well as uses the Firebase real-time database.Foodly app is responsive on all devices and was deployed with Netlify.';
+    'Foodly is a restaurant order taking app built in ReactJS. The potential user of the website can search through available meals, add/remove meals to/from the shopping cart, fill the order form and complete the order. The application relies heavily on Redux Toolkit for the state management, as well as uses the Firebase real-time database. Foodly app is responsive on all devices and was deployed with Netlify.';
 
 export const scentShopTechList1 = ['C#', 'ASP.NET', 'Entity Framework'];
 

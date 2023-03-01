@@ -6,6 +6,7 @@ import {
     foodlyTechList1,
     outdoorTechList1,
     scentShopTechList1,
+    trelloCloneTechList1,
     udemyCourseTechList1,
 } from '../../../../config/data';
 import {
@@ -80,6 +81,13 @@ const PersonalProjectsSectionSection = (): ReactElement => {
                             githubLink="https://github.com/anna-ossowska/advision-v2"
                             internalLink={`/${PROJECTS}/${ADVISION_PROJECT}`}
                             externalLink="https://advision-company.netlify.app/"
+                        />
+
+                        <PersonalProjectCard
+                            projectTitle="Trello Clone"
+                            projectDescription="I'm currently dedicating my free time to working on a new project aimed at pushing the boundaries of the popular drag-and-drop library, React Beautiful Dnd. I'm excited about the possibilities this will unlock and can't wait to see where this project takes me."
+                            techList={trelloCloneTechList1}
+                            githubLink="https://github.com/anna-ossowska/trello-clone"
                         />
                     </PersonalProjectsWrapper>
                 </div>

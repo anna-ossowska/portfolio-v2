@@ -67,7 +67,7 @@ const AboutSection = (): ReactElement => {
                         <StyledParagraph>
                             At Veni, I have the opportunity to leverage my passion for web development to create
                             intuitive and responsive applications for clients in diverse industries such as renewable
-                            energy, building, retail, and food production. I take pride in collaborating with
+                            energy, building, retail, and food production. I also take pride in collaborating with
                             cross-functional teams using Scrum methodology to ensure successful project delivery.
                         </StyledParagraph>
 

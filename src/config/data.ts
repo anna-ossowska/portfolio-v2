@@ -271,3 +271,5 @@ export const advisionTechList2 = [
 
 export const advisionDescription =
     'Advision is a website tailored for the consulting company. During the development phase I paid special attention to creating a scalable front-end architecture by using the 7-1 pattern combined with BEM methodology. The website contains many reusable Sass components which results in consistent look and feel across all pages. The application is fully responsive and was deployed with Netlify.';
+
+export const trelloCloneTechList1 = ['React', 'React Beautiful Dnd'];

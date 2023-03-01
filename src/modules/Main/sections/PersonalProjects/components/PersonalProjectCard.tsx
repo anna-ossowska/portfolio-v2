@@ -82,8 +82,8 @@ interface PersonalProjectCardProps {
     projectDescription: string;
     techList: string[];
     githubLink?: string;
-    internalLink: string;
-    externalLink: string;
+    internalLink?: string;
+    externalLink?: string;
 }
 
 const PersonalProjectCard = ({
@@ -114,9 +114,11 @@ const PersonalProjectCard = ({
                                 <IconGithub />
                             </a>
                         )}
-                        <a href={externalLink} target="_blank" rel="noopener noreferrer">
-                            <IconExternalLink />
-                        </a>
+                        {externalLink && (
+                            <a href={externalLink} target="_blank" rel="noopener noreferrer">
+                                <IconExternalLink />
+                            </a>
+                        )}
                     </IconSubGroup>
                 </IconGroup>
                 <ContentWrapper onClick={clickHandler}>

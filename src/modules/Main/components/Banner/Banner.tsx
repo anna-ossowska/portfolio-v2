@@ -60,11 +60,11 @@ const Banner = (): ReactElement => {
                 <FeaturedParagraph>My name is</FeaturedParagraph>
                 <PrimaryHeading message="Anna Ossowska." />
                 <Description>
-                    With five years of experience in the IT and management consulting sectors, I excel as a{' '}
-                    <TextHighlight>Front-end Developer</TextHighlight> and{' '}
-                    <TextHighlight>Graphic Designer</TextHighlight>, driven by a passion for developing scalable
-                    products that prioritize user experience. I bring a unique blend of technical and creative expertise
-                    to projects, leveraging cutting-edge technologies and design principles.
+                    With five years of experience in the <TextHighlight>IT and management consulting</TextHighlight>{' '}
+                    sectors, I excel as a <TextHighlight>Front-end Developer and Graphic Designer</TextHighlight>,
+                    driven by a passion for developing scalable products that prioritize user experience. I bring a
+                    unique blend of technical and creative expertise to projects, leveraging cutting-edge technologies
+                    and design principles.
                 </Description>
                 <ButtonContainer>
                     <Button message="Check out my projects" large={true} path="commercial-products" isScrolling />

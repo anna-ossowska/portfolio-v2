@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import Profile from '../../../../assets/images/profile.png';
-import { NumberedHeader, ScrollAdjustment } from '../../../../common/index';
+import { NumberedHeader, ScrollAdjustment, TextHighlight } from '../../../../common/index';
 import { StyledSection } from '../../components/index';
 import { StyledParagraph } from './components/index';
 
@@ -56,8 +56,12 @@ const AboutSection = (): ReactElement => {
                 <AboutSectionContainer>
                     <div>
                         <StyledParagraph>
-                            I am currently working as a Front-end Developer and Consultant at Veni AS, a cutting-edge
-                            technology and innovation firm located in the beautiful city of Stavanger, Norway.
+                            I am currently working as a Front-end Developer and Consultant at{' '}
+                            <a href="https://veni.no/" target="_blank" rel="noopener noreferrer">
+                                <TextHighlight isNeutralColor={true}>Veni AS</TextHighlight>
+                            </a>
+                            , a cutting-edge technology and innovation firm located in the beautiful city of Stavanger,
+                            Norway.
                         </StyledParagraph>
 
                         <StyledParagraph>
@@ -68,18 +72,30 @@ const AboutSection = (): ReactElement => {
                         </StyledParagraph>
 
                         <StyledParagraph>
-                            Before joining Veni, my interest in programming and web development grew while working as a
-                            Graphic Designer at Bain & Company. In 2020, I relocated to Norway and pursued a Full-stack
-                            Web Development Program at Le Wagon Coding School in Oslo. Since then, I have been dedicated
-                            to expanding my programming and design skills by working on various coding projects and
-                            completing multiple online courses.
+                            My interest in programming and web development grew while working as a Graphic Designer at{' '}
+                            <a href="https://www.bain.com/" target="_blank" rel="noopener noreferrer">
+                                <TextHighlight isNeutralColor={true}>Bain & Company</TextHighlight>
+                            </a>
+                            .
                         </StyledParagraph>
 
                         <StyledParagraph>
-                            To further my knowledge, I obtained certifications in a range of programming topics,
-                            including React, TypeScript, JavaScript, CSS, Sass, Figma prototyping, responsive design,
-                            and C#. You can check out my coding journey in the ‘Projects’ section, as well as on my
-                            GitHub profile.
+                            In 2020, I relocated to Norway and pursued a Full-stack Web Development Program at{' '}
+                            <a href="https://www.lewagon.com/" target="_blank" rel="noopener noreferrer">
+                                <TextHighlight isNeutralColor={true}>Le Wagon Coding School</TextHighlight>
+                            </a>{' '}
+                            in Oslo. Since then, I have been dedicated to expanding my programming and design skills by
+                            working on various coding projects and completing multiple online courses.
+                        </StyledParagraph>
+
+                        <StyledParagraph>
+                            To further my knowledge, I obtained certifications in a range of topics, including React,
+                            TypeScript, JavaScript, CSS, Sass, Figma prototyping, responsive design, and C#. You can
+                            check out my coding journey in the ‘Projects’ section, as well as on my{' '}
+                            <a href="https://github.com/anna-ossowska" target="_blank" rel="noopener noreferrer">
+                                <TextHighlight isNeutralColor={true}>GitHub</TextHighlight>
+                            </a>{' '}
+                            profile.
                         </StyledParagraph>
                     </div>
                     <ImageContainer>

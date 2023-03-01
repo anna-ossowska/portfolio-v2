@@ -72,12 +72,13 @@ export const solintegraTechList2 = [
 ];
 
 export const solintegraRespList = [
-    'Implementing the front-end architecture, authentication, and state management',
+    'Implementing the front-end architecture, authentication and state management',
     'Integrating the application with AWS Amplify',
-    'Creating the responsive user interface based on Figma prototypes',
+    'Creating responsive user interfaces based on Figma prototypes',
     'Implementing a Solar Roof Calculator',
-    'Writing the technical documentation',
-    'Working with the Agile Scrum methodology',
+    'Writing technical documentation',
+    'Conducting code reviews',
+    'Providing project management and technical advisory services',
 ];
 
 export const solintegraUserStoriesList = [
@@ -148,14 +149,14 @@ export const lifeAtWorkTechList2 = [
 ];
 
 export const lifeAtWorkDescription =
-    'Life@Work is a digital platform where building owners have an opportunity to collect all services and resources for a building in a common portal. Thus, both tenants, operating organizations and building owners can use a common digital solution for everything to do with a building, as well as have access to services based on their role and needs.';
+    'The digital platform for building owners to manage all services and resources related to their building through a common portal. This solution allowed tenants, operating organizations, and building owners to access services based on their role and needs.';
 
 export const lifeAtWorkRespList = [
     'Assisting in the implementation of the ticketing system',
-    'Creating the responsive user interface based of Figma prototypes',
-    'Helping the team to reduce the technical debt by managing Backlog task',
+    'Creating responsive user interfaces based of Figma prototypes',
+    'Managing the Backlog tasks to reduce technical debt',
     'Working with the Agile Scrum methodology',
-    'Code reviewing',
+    'Conducting code reviews',
 ];
 
 // 3. Fatland
@@ -179,13 +180,13 @@ export const fatlandTechList2 = [
 ];
 
 export const fatlandDescription =
-    'MittFatland is a portal for Norwegian farmers and meat producers. It provides solutions for monitoring livestock production, as well as the efficient administration of purchase and sales activities.';
+    'The portal designed for Norwegian farmers and meat producers. It provides solutions for monitoring livestock production, as well as efficient administration of purchase and sales activities.';
 
 export const fatlandRespList = [
-    'Implementing dynamic dashboards for tracking the livestock data',
-    'Creating the responsive user interface based of Figma prototypes',
-    'Code base management',
-    'Code reviewing',
+    'Implementing dynamic dashboards to track livestock data',
+    'Managing the code base',
+    'Creating responsive user interfaces based of Figma prototypes',
+    'Conducting code reviews',
     'Working with the Agile Scrum methodology',
 ];
 
